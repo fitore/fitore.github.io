@@ -40,8 +40,8 @@
 }
 .content-box--profile .content-box-heading {
 	color: #FFF;
-    font-size: 60px;
-    line-height: 170px;	
+    font-size: 40px;
+    line-height: 100px;	
     text-align: center;
 }
 .content-box--about {
@@ -87,6 +87,10 @@
 	.content-box--profile {
 		width: 60%;
 	}
+	.content-box--profile .content-box-heading {
+	    font-size: 60px;
+	    line-height: 170px;	
+	}	
 	.content-box--about {
 		margin-right: 0;
 		width: 37%;
