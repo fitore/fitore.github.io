@@ -1,0 +1,112 @@
+.frame {
+	color: #683c4a;
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.3em;
+}
+.wrapper {
+	background-color: #FFF;
+	border: 1px solid #EAEAEA;
+	font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif;
+	max-width: 960px;
+	margin: 20px;
+	padding: 40px 40px 20px 40px;
+}
+.content-box {
+	box-sizing: border-box;
+	margin: 0 0 20px 0;
+	min-height: 300px;
+	padding: 20px;
+	width: 100%;
+}
+.content-box-heading {
+	font-weight: 700;
+	font-size: 22px;
+}
+.content-link {
+	color: #BE4C54;
+	font-weight: 700;
+	text-decoration: none;
+}
+.content-link:hover {
+	color: #002e62;
+}
+.social-link {
+	display: block;
+	margin: 10px 0;
+}
+.content-box--profile {
+	background-color: #E94E77;
+}
+.content-box--profile .content-box-heading {
+	color: #FFF;
+    font-size: 60px;
+    line-height: 170px;	
+    text-align: center;
+}
+.content-box--about {
+	background-color: #FFD8D8;
+}
+.content-box--work {
+	background-color: #C8F1F8;
+}
+.content-box--work .content-link {
+	color: #002e62;
+}
+.content-box--work .content-link:hover {
+	color: #BE4C54;
+}
+.content-box--contact {
+	background-color: #FFEFD3;
+}
+.content-box--icon {
+	display: none;
+}
+.employer-list {
+	margin: 0;
+	padding: 0;
+}
+.employer-item {
+	list-style-type: none;
+	margin: 0 0 10px 0;
+}
+.copyright {
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+	.wrapper {
+		margin: 40px auto;
+	}
+	.content-box {
+		float: left;
+		margin-right: 3%;
+	}
+	.content-box--profile {
+		width: 60%;
+	}
+	.content-box--about {
+		margin-right: 0;
+		width: 37%;
+	}
+	.content-box--work {
+		width: 55%;
+	}
+	.content-box--contact {
+		margin-right: 0;
+		width: 27%;
+	}	
+	.content-box--icon {
+		background: transparent url('../images/tota.jpg') no-repeat center center;
+		display: block;
+		clear: both;
+		width: 12%;
+	}	
+	.employer-item:nth-child(2n+1) {
+		float: left;
+		margin-right: 40px;
+		width: 200px;
+	}	
+}
