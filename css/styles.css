@@ -1,12 +1,12 @@
 .frame {
+	background: #EAEAEA;
 	color: #683c4a;
 	margin: 0;
 	font-size: 18px;
 	line-height: 1.3em;
 }
 .wrapper {
-	background-color: #FFF;
-	border: 1px solid #EAEAEA;
+	background-color: #FFF;	
 	font-family: 'Josefin Sans', 'Trebuchet MS', sans-serif;
 	max-width: 960px;
 	padding: 20px 20px 10px 20px;
@@ -14,7 +14,7 @@
 .content-box {
 	box-sizing: border-box;
 	margin: 0 0 20px 0;
-	padding: 20px;
+	padding: 0 20px;
 	width: 100%;
 }
 .content-box-heading {
@@ -43,19 +43,13 @@
     text-align: center;
 }
 .content-box--about {
-	background-color: #FFD8D8;
+	border: 10px solid #FFD8D8;
 }
 .content-box--work {
-	background-color: #C8F1F8;
-}
-.content-box--work .content-link {
-	color: #002e62;
-}
-.content-box--work .content-link:hover {
-	color: #BE4C54;
+	border: 10px solid #C8F1F8;
 }
 .content-box--contact {
-	background-color: #FFEFD3;
+	border: 10px solid #FFEFD3;
 }
 .content-box--icon {
 	display: none;
