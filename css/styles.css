@@ -1,6 +1,6 @@
 .frame {
 	background: #EAEAEA;
-	color: #683c4a;
+	color: #555555;
 	margin: 0;
 	font-size: 18px;
 	line-height: 1.3em;
@@ -22,12 +22,10 @@
 	font-size: 22px;
 }
 .content-link {
-	color: #BE4C54;
-	font-weight: 700;
-	text-decoration: none;
+	color: #000000;		
 }
 .content-link:hover {
-	color: #002e62;
+	color: #BE4C54;
 }
 .social-link {
 	display: block;
