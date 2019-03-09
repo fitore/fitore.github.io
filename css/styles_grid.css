@@ -1,0 +1,94 @@
+/* Author: Fitore Jaha Price */
+
+.site { 	
+	color: #555555;
+	margin: 0;
+	font-size: 1rem;	
+	font-family: "Open Sans", sans-serif;
+}
+
+.grid {
+	background-color: #FFF;	
+	display: grid;
+	grid-template-areas: "header header about"
+	"contact photo about"
+	"footer footer footer";		
+	max-width: 60rem; 
+	margin: 1rem auto;
+}
+
+.grid-content {
+	padding: 1rem;
+}
+
+.header {
+	border-bottom: 2px solid #000;
+	grid-area: header;
+}
+
+.about {
+	border-left: 2px solid #000;
+	grid-area: about;
+}
+  
+.footer {
+	align-content: center;
+	border-top: 2px solid #000;
+	font-size: 0.9rem;
+	grid-area: footer;
+	text-align: center;
+	padding-top: 1.5rem;
+}
+
+.contact {
+	border-right: 2px solid #000;
+	grid-area: contact;
+}
+
+.content-link {
+	color: #DC143C;
+}
+
+.content-link:hover {
+	color: #BE4C54;
+	text-decoration: none;	
+}
+
+.heading {
+	color: #000;
+	font-family: 'Merriweather', serif;		
+	margin: 0;
+}
+
+.name {
+	font-size: 3rem;	
+}
+
+.profile-image {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.employer-list {
+	margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+	.grid {
+		grid-template-areas: "header header"
+		"about about"
+		"contact photo"				
+		"footer footer";		
+		grid-gap: 1rem;	
+	}
+
+	.about {
+		border-left: none;
+		border-bottom: 2px solid #000;
+	}
+
+	.name {
+		font-size: 2.25rem;	
+	}	
+}
