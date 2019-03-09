@@ -92,3 +92,19 @@
 		font-size: 2.25rem;	
 	}	
 }
+
+@supports not (display: grid) {
+	.grid {
+		display: block;	
+		max-width: 40rem;	
+	}
+
+	.grid-content {		
+		border-right: none;
+		border-left: none;
+	}
+
+	.photo {		
+		display: none;
+	}
+}
