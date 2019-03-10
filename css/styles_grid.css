@@ -6,43 +6,12 @@
 	font-size: 1rem;	
 	font-family: "Open Sans", sans-serif;
 }
-
-.grid {
-	background-color: #FFF;	
-	display: grid;
-	grid-template-areas: "header header about"
-	"contact photo about"
-	"footer footer footer";		
-	max-width: 60rem; 
-	margin: 1rem auto;
-}
-
-.grid-content {
-	padding: 1rem;
-}
-
-.header {
-	border-bottom: 2px solid #000;
-	grid-area: header;
-}
-
-.about {
-	border-left: 2px solid #000;
-	grid-area: about;
-}
   
 .footer {
-	align-content: center;
 	border-top: 2px solid #000;
-	font-size: 0.9rem;
-	grid-area: footer;
+	font-size: 0.9rem;	
 	text-align: center;
 	padding-top: 1.5rem;
-}
-
-.contact {
-	border-right: 2px solid #000;
-	grid-area: contact;
 }
 
 .content-link {
@@ -66,12 +35,57 @@
 
 .profile-image {
 	object-fit: cover;
-	height: 100%;
-	width: 100%;
+	width: 250px;
 }
 
 .employer-list {
 	margin: 0;
+}
+
+.grid {
+	background-color: #FFF;	
+	max-width: 60rem; 
+	margin: 1rem auto;
+}
+
+.grid-content {
+	padding: 1rem;
+}
+
+@supports (display: grid) {
+	.grid {		
+		display: grid;
+		grid-template-areas: "header header about"
+		"contact photo about"
+		"footer footer footer";				
+	}
+	
+	.header {
+		border-bottom: 2px solid #000;
+		grid-area: header;
+	}
+	
+	.about {
+		border-left: 2px solid #000;
+		grid-area: about;
+	}
+	  
+	.footer {						
+		grid-area: footer;
+		text-align: center;		
+	}
+	
+	.contact {
+		border-right: 2px solid #000;
+		grid-area: contact;
+	}
+
+	.profile-image {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}	
+
 }
 
 @media screen and (max-width: 500px) {
@@ -91,20 +105,4 @@
 	.name {
 		font-size: 2.25rem;	
 	}	
-}
-
-@supports not (display: grid) {
-	.grid {
-		display: block;	
-		max-width: 40rem;	
-	}
-
-	.grid-content {		
-		border-right: none;
-		border-left: none;
-	}
-
-	.photo {		
-		display: none;
-	}
 }
