@@ -15,12 +15,14 @@
 }
 
 .content-link {
-	color: #DC143C;
+	color: #BE4C54;
+	font-weight: 700;
+	text-decoration: none;	
 }
 
-.content-link:hover {
-	color: #BE4C54;
-	text-decoration: none;	
+.content-link:hover {	
+	color: #DC143C;
+	text-decoration: underline;	
 }
 
 .heading {
