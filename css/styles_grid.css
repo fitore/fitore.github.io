@@ -1,6 +1,7 @@
 /* Author: Fitore Jaha Price */
 
 .site { 	
+	background-color: #f0f0f0;
 	color: #555555;
 	margin: 0;
 	font-size: 1rem;	
@@ -8,7 +9,7 @@
 }
   
 .footer {
-	border-top: 2px solid #000;
+	border-top: 3px solid #FFF;
 	font-size: 0.9rem;	
 	text-align: center;
 	padding-top: 1.5rem;
@@ -44,14 +45,13 @@
 	margin: 0;
 }
 
-.grid {
-	background-color: #FFF;	
+.grid {	
 	max-width: 60rem; 
 	margin: 1rem auto;
 }
 
 .grid-content {
-	padding: 1rem;
+	padding: 2rem;
 }
 
 @supports (display: grid) {
@@ -63,12 +63,13 @@
 	}
 	
 	.header {
-		border-bottom: 2px solid #000;
+		border-bottom: 3px solid #FFF;
 		grid-area: header;
+		padding-bottom: 0;
 	}
 	
 	.about {
-		border-left: 2px solid #000;
+		border-left: 3px solid #FFF;
 		grid-area: about;
 	}
 	  
@@ -78,7 +79,7 @@
 	}
 	
 	.contact {
-		border-right: 2px solid #000;
+		border-right: 3px solid #FFF;
 		grid-area: contact;
 	}
 
@@ -90,7 +91,7 @@
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
 	.grid {
 		grid-template-areas: "header header"
 		"about about"
@@ -99,9 +100,13 @@
 		grid-gap: 1rem;	
 	}
 
+	.header {
+		padding-bottom: 2rem;
+	}
+
 	.about {
 		border-left: none;
-		border-bottom: 2px solid #000;
+		border-bottom: 3px solid #FFF;
 	}
 
 	.name {
