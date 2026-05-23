@@ -1,4 +1,7 @@
 /* Blog supplement — do not modify styles_grid2.css */
+img {
+  width: 100%;
+}
 
 .site-nav {
   max-width: 60rem;
