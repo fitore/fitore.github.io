@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="post-container">
+  <h1 class="heading name">Fitore's Blog</h1>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <div class="post-back">
+    <a href="{{ '/blog/' | relative_url }}" class="content-link">&larr; All posts</a>
+  </div>
+</div>
