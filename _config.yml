@@ -1,0 +1,13 @@
+title: Fitore Jaha Price, Personal Website
+description: Senior Engineering Leader
+author: Fitore Jaha Price
+url: "https://fitorejaha.com"
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

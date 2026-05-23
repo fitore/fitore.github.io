@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title | default: site.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="{{ '/css/styles_grid2.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700" rel="stylesheet">
+</head>
+<body class="site">
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog/' | relative_url }}">Writing</a>
+  </nav>
+  {{ content }}
+  <footer class="grid-content footer">Copyright &copy; {{ site.time | date: '%Y' }}, {{ site.author }}.</footer>
+</body>
+</html>
