@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Managing in the AI Era"
-date: 2026-05-23
+date: 2026-05-05
 ---
 
 The most useful reframe I've found for working with AI agents is also the one that falls apart fastest: treat them like a junior developer.
