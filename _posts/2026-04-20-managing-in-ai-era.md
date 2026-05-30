@@ -36,7 +36,8 @@ Change management in an AI adoption context is mostly about surfacing the right 
 
 The junior developer frame doesn't scale up. Working with a Staff Engineer who is fluent in agents isn't management — it's something closer to architecture by division of labour.
 
-My Staff Engineer is the one who goes deep: building the VS Code agent skills that enforce our domain model at the IDE layer, designing the harness that routes tasks across an orchestrated agent pipeline, proposing which constraints should live in tooling rather than documentation. That work requires being inside the codebase, close to the execution layer. I'm not the right person to do it, and trying to be would slow us both down.
+
+My Staff+ Engineers are the ones who go deep: designing the composable orchestration stack (deliberately open-source, deliberately legible — full engineering visibility over cost and vendor dependency), architecting the MCP governance layer that controls what agents can see and do at the access boundary rather than through prompt instructions that can be overridden, and building the ontology-backed knowledge model that lets agents answer dependency and ownership questions rather than keyword-match documents. That work requires being inside the codebase, close to the execution layer with me as their thinking partner.
 
 What I own is the surface those tools run against. The architectural constraints they need to enforce. The business rules that have to survive a compliance review. The context that makes the difference between a skill that guides an engineer toward the right pattern and one that confidently produces the wrong thing. When I write a clear problem statement or define the boundary between two bounded contexts, I'm not doing less than my Staff Engineer — I'm doing the upstream work their agent skills depend on.
 
