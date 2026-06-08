@@ -2,6 +2,7 @@
 layout: post
 title: "What a Merger Actually Tests - Ontology to the Rescue"
 date: 2026-04-30
+info: (images co-created with AI)
 ---
 
 We're mid-merger. Two engineering organisations, two toolchains, two different answers to the question: where does customer data live, and who owns it?
