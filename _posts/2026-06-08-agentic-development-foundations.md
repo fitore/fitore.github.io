@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Agentic development: from fear to evidence"
-date: 2026-05-24
+date: 2026-06-28
 info: (images co-created with AI)
 ---
 Over the last year I've watched two different approaches to AI adoption play out inside a regulated financial institution.
