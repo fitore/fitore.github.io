@@ -80,3 +80,5 @@ The Balkans taught me directness. The Middle East taught me that directness is a
 And now, working with AI systems that understand exactly what you say and miss what you mean — I find myself in familiar territory. A new decoder, a new frame, the same translation problem.
 
 I've been training for this for a while. I just didn't know that's what it was called.
+
+![Translating Intent](/images/translating-intent.png)
