@@ -16,10 +16,8 @@ The concerns in regulated environments are legitimate. The cost of being wrong c
 
 Building a small, observable system changes the conversation. The discussion shifts from hypothetical risks to specific risks. From generic controls to targeted controls. From assumptions to evidence.
 
-![Unified Platform North Star](/images/agentic-dev-foundations.png)
 
----
-# That experience changed how I think about autonomy
+### That experience changed how I think about autonomy
 
 I used to think of governance and automation as opposing forces. One slows things down, the other speeds things up. Increasingly, I think they're the same thing viewed from different angles. The systems that can safely automate the most work are usually the systems with the clearest definitions, ownership boundaries, constraints, and verification mechanisms. 
 
@@ -45,3 +43,10 @@ Good systems don't become autonomous because someone added agents.
 
 They become autonomous because the layers underneath them make autonomous operation safe.
 
+
+
+---
+
+
+
+![Unified Platform North Star](/images/agentic-dev-foundations.png)

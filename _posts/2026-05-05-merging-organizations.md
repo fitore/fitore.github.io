@@ -1,41 +1,42 @@
 ---
 layout: post
-title: "What a Merger Actually Tests - Ontology to the Rescue"
+title: "What a Merger Actually Tests: Foundations, Revealed Under Load"
 date: 2026-04-30
 info: (images co-created with AI)
 ---
 
-We're mid-merger. Two engineering organisations, two toolchains, two different answers to the question: where does customer data live, and who owns it?
 
-The interesting thing isn't the integration work itself. The interesting thing is which decisions made years ago are still holding — and which ones were never really decisions. Just the path of least resistance, repeated until it looked like architecture.
+We're in the middle of a merger. Two engineering organisations, two toolchains, and more than one answer to questions that used to feel obvious: where does customer data live, who owns it, and which system gets the final say. The interesting thing isn't the integration work itself. It's discovering which decisions made years ago are still holding, and which ones were never really decisions at all—just the path of least resistance repeated often enough that it started to look like architecture.
 
-A merger is a stress test. And foundations, in my experience, are the work nobody wants to fund upfront because they look like overhead until the moment they aren't.
+A merger is a stress test. Like most stress tests, it reveals foundations that were largely invisible while everything lived inside a single environment. The things that looked settled suddenly need explaining. Assumptions that were never written down become important. Systems that appeared coherent start exposing the compromises that held them together. The technical integration is usually straightforward compared to the work of making those assumptions explicit.
 
-### The first thing that gets tested: whether you have a shared definition of the domain.
+### The first thing that gets tested is whether there is a shared definition of the domain
 
-A canonical domain model, aka Ontology, isn't a documentation exercise. It's a contract: a single governed definition of what "customer" means, what "account" means, what a "transaction" is versus a "movement" versus a "posting." Every team is a consumer of this contract, not an author of it.
+Some teams call this a canonical domain model. Others call it an ontology. The label matters less than the outcome: a shared understanding of what the business actually is. A schema can tell you that a Customer has a name, address, and identifier. An ontology tells you what a Customer is, what states it can move through, what relationships it can participate in, and which actions are allowed at each stage. The distinction sounds academic until two organisations try to merge their systems and discover they have been using the same word to describe different things.
 
-The subtlety most teams miss: that contract needs to define *meaning*, not just shape. A schema tells you what fields exist. An ontology tells you what a Party actually is — what states it can be in, who is authorised to move it between them, and what the Party is called at each stage: Lead, Applicant, Tax Subject, Consent Holder, Account Owner. Same human. Five governed states. Every system models the slice it needs; the ontology is what makes those slices coherent.
+When those definitions exist, a merger becomes the work of reconciling two implementations of the same ideas. Difficult, but ultimately tractable. When they don't, you discover something more fundamental: the disagreement isn't about implementation. It's about meaning.
 
-When you have it, merging two organisations means reconciling two implementations of the same contract. Hard, but tractable. When you don't, you're not reconciling implementations — you're discovering mid-stream that you never agreed on the thing itself. This is a recognisable pattern. I think of it as the Golden Source Myth: the idea that there is one true version of an entity, if only you could find it. There isn't. There are multiple valid representations, each serving a different purpose, and the only thing that holds them together is a shared ontology.
+One pattern I keep seeing is what I think of as the Golden Source Myth: the belief that somewhere in the organisation there is a single true representation of a business entity waiting to be discovered. In practice, there usually isn't. There are multiple valid representations, each optimized for a different purpose. A customer in a CRM, a customer in a lending platform, and a customer in a ledger all serve different needs and carry different constraints. What keeps them coherent is not a database. It's shared meaning.
 
-### The second thing: whether audit was designed in or bolted on.
+### The second thing a merger tests is whether audit was designed in or added later
 
-In a regulated environment, every mutation is a regulated action. Current state is a projection of the log — not the source of it. When that's true from the start, the compliance trail is an architectural property: the event log, queryable and durable, is what the system is built on. When it isn't, audit becomes someone's full-time job, usually after an examination.
+In regulated environments, writes are rarely just technical operations. They're business actions with compliance implications attached to them. When systems are built around durable events and append-only history, audit tends to emerge naturally because the architecture already preserves the story of what happened. When they aren't, audit often becomes a separate process layered on afterward. It works, but usually at the cost of complexity, manual effort, and institutional memory. The difference becomes obvious the moment someone asks not what the system looks like now, but how it got here.
 
-### The third thing: whether you have seams.
+### The third thing a merger tests is whether you have seams
 
-The things that tend to survive reorgs and mergers are bounded contexts with clear ownership, event-driven interfaces between services, and a data layer where the financial ledger is genuinely separate from everything else. Not because these are fashionable choices — because they give you seams. Seams are where you cut when you need to.
+The systems that tend to survive mergers well aren't necessarily the newest or most elegant. They're the ones with clear boundaries. Bounded contexts. Explicit ownership. Event-driven interfaces. Financial ledgers separated from operational workflows. Not because these are fashionable architecture patterns, but because they provide places to cut. Seams matter when organisations change. They matter when systems split. They matter when ownership moves. A surprising amount of architecture only works as long as nobody touches it.
 
-The things that don't survive: shared databases with implicit contracts, monolithic authentication bolted onto a single org structure, and "we'll document the domain model later." A classic, and always technically true.
+The newest version of this test is the agent layer.
 
-### What I'm watching now: the agentic layer as the newest version of this test.
+One thing I've found interesting is that the conversations around agents expose many of the same questions the merger exposes: ownership, authorisation, auditability, and source of truth. The agent itself isn't really the new thing. It's another consumer of the same foundations. If the domain model is unclear, the agent inherits that ambiguity. If ownership is fuzzy, the agent inherits that confusion. If audit is missing, the agent simply accelerates the problem. Strong foundations make agents safer. Weak foundations make agents more revealing. Which may be their most useful property.
 
-We've added an agent channel to our architecture — same authorisation model, same audit trail, same idempotency requirements as every other channel. That was only possible because the agent tool surface is generated from the same ontology as every other API surface. Not a separate AI path. Not a shortcut. A consumer of the same governed contract, same as the mobile app.
+The lesson I've taken from the merger isn't really about mergers. It's that foundations remain invisible until something applies pressure. Growth does it; Regulation does it; Reorganisations do it; Mergers do it. Increasingly, agents do it too.
 
-If the foundations aren't there, agents don't make it better. They make it faster to find out.
+The question worth asking before any of those arrive is simple: if you had to split this system in two tomorrow, where are the seams? If you can't answer that quickly, you may not have an architecture. You may have a history.
 
-The question worth asking before the merger, not after: if you had to split this system in two tomorrow, where are the seams? If you can't answer that quickly, you may not have an architecture. You may have a history.
 
 ---
+
+
+
 ![Unified Platform North Star](/images/unified-platform-north-star.png)

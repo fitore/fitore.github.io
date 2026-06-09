@@ -3,7 +3,7 @@ layout: post
 title: "Translating intent in real life and tech systems"
 date: 2026-05-24
 ---
-# The thing I've been doing my whole life finally has a name
+### The thing I've been doing my whole life finally has a name
 
 I was building [Radian](https://radian-geometric-art.vercel.app) with Claude Code — a geometric art project — and a UI modal wasn't rendering fully on mobile. I asked Claude Code to debug it. What followed was a CSS debugging loop that nearly burned through my daily token limit: each fix producing a new variant of the same problem, each iteration technically reasonable, none of them working. I interrupted it and asked for a UI refactor instead. The modal rendered. Thirty seconds.
 
@@ -11,9 +11,8 @@ The model understood exactly what I asked. It didn't understand what I meant.
 
 I'd been here before. Not with AI.
 
----
 
-## Subtlety is relative
+### Subtlety is relative
 
 When I moved from the Balkans to the Middle East, I thought I knew how to communicate directly. I was wrong — but in a direction I hadn't anticipated.
 
@@ -27,9 +26,8 @@ The insight that took me too long to name: *the same signal produces a different
 
 Translation isn't about the words. It's about what the receiver's frame will do with them.
 
----
 
-## Systems speak in dialects
+### Systems speak in dialects
 
 When you integrate two software systems, the semantic work is harder than the technical work. Two systems can share a field name and mean completely different things. One system's `status: closed` means the record is archived. Another's means the transaction failed. The schema maps. The meaning doesn't.
 
@@ -37,9 +35,8 @@ The real integration work is surfacing the implicit assumptions — the things e
 
 Translation here is not a linguistic problem. It's an ontological one. You're not converting words. You're finding where the world-models diverge.
 
----
 
-## Mergers are integration at human scale
+### Mergers are integration at human scale
 
 An acquisition is the same problem, larger and louder and wearing nicer clothes.
 
@@ -49,17 +46,14 @@ The technical integration is a project plan. The cultural translation is the act
 
 I've been living a version of this right now — not across two companies, but across two disciplines that had been using the same vocabulary to mean different things long enough that nobody had noticed. Working with our Director of Data and a staff engineer, we kept running into the same friction: engineering and data had developed their own internal dialects for the same concepts. Customer. Event. State. The words matched. The models underneath them didn't.
 
-The answer we've been building toward isn't a glossary. It's an ontology SDK: shared vocabulary made programmable, so the translation layer lives in the infrastructure rather than in someone's head or a Confluence page nobody reads after the second week.
-
-The insight that pushed us there: documentation describes the gap. Code enforces the bridge. If translation depends on a human remembering to apply it, it will eventually fail.
+The answer we've been building toward isn't a glossary. It's an ontology SDK: shared vocabulary made programmable, so the translation layer lives in the infrastructure rather than in someone's head or a Confluence page nobody reads after the second week. The insight that pushed us there: documentation describes the gap. Code enforces the bridge. If translation depends on a human remembering to apply it, it will eventually fail.
 
 *(I'm writing a longer post on the ontology work — the architecture, the tradeoffs, and what it revealed about where engineering and data actually diverge conceptually. [Read it here when it's up.](/blog/2026/04/30/merging-organizations/))*
 
 This is, it turns out, precisely what I had been doing between the Balkans and the Middle East and Canada. The subject matter had scaled. The problem was structurally identical.
 
----
 
-## The actual skill
+### The actual skill
 
 The CSS debugging loop wasn't a Claude Code failure. It was a translation failure — mine. I had described the symptom accurately. I hadn't communicated the intent: *make this work on mobile, by whatever means*. The model optimized for the problem I named, not the outcome I needed. The moment I reframed the request — refactor rather than fix — the translation landed and the work resolved.
 
@@ -80,5 +74,8 @@ The Balkans taught me directness. The Middle East taught me that directness is a
 And now, working with AI systems that understand exactly what you say and miss what you mean — I find myself in familiar territory. A new decoder, a new frame, the same translation problem.
 
 I've been training for this for a while. I just didn't know that's what it was called.
+
+--- 
+
 
 ![Translating Intent](/images/translating-intent.png)
