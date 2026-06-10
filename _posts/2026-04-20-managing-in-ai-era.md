@@ -1,46 +1,30 @@
 ---
 layout: post
-title: "Managing in the AI Era"
+title: "Managing in the AI Era: Where the Responsibility Moves"
 date: 2026-05-05
 ---
 
-The most useful reframe I've found for working with AI agents is also the one that falls apart fastest: treat them like a junior developer.
+### The Junior Developer Analogy
 
-It works because it sets the right operational stance. You wouldn't give a junior developer a vague ticket and walk away. You wouldn't merge their PR without review. You wouldn't assume silence means progress — in that context, silence usually means they're stuck or have gone somewhere unexpected and haven't told you. The same is true for agents, and for roughly the same reasons.
+The most useful reframe I've found for working with AI agents is to treat them like junior developers. Not because they're equivalent. They're not. The analogy works because it encourages the right operational behavior. You don't hand a junior developer a vague ticket and disappear. You don't merge code without review. You don't assume silence means progress. Most of the time, silence means they're stuck, confused, or solving a different problem than the one you thought you gave them. The same pattern shows up with agents. Give them a poorly-defined problem and they'll often produce something technically reasonable that misses the intent entirely. The failure mode isn't incompetence. It's translation.
 
-### Where it breaks: junior developers grow. Agents don't — not the same way.
+The analogy starts to break down when you look at where improvement comes from.
 
-The investment in onboarding and feedback compounds over time with a human. With agents, the compounding happens at the tooling level — better grounding, better skill definitions, better constraints. You're not developing the agent; you're developing the system around it. That's a different kind of management, and it's worth naming the difference.
+A junior developer improves through experience. Agents don't. When performance improves, it's usually because the surrounding system improved: better context, sharper skills, clearer constraints, stronger verification, more explicit definitions of success. You're not developing the agent. You're developing the environment the agent operates within.
 
-### How we structured permission to experiment.
+We saw this in our own experimentation. We run a small R&D guild, intentionally separated from production concerns. The goal isn't to ship. It's to explore what becomes possible, retire findings back into the current state, and make the gaps visible. One of the workflows that emerged was an agentic software factory. A ticket arrives. One agent develops an implementation plan. Another writes code. Another reviews it. Another prepares deployment. Humans sit at the gates between stages. Not because we don't trust the agents, but because in a regulated environment the human-in-the-loop isn't optional. It's part of the system design.
 
-We run a guild model — a small group of senior engineers working in a dedicated R&D space, explicitly sandboxed from production. The brief: prove what's possible, retire findings back to current state, name the gaps. No pressure to ship. Permission to be wrong quickly.
-
-What came back was instructive. The group built an agentic development workflow: a ticket arrives, one agent writes an implementation plan, a second writes the code, a third reviews it, a fourth stages the deploy. Each step has a human at the gate. Not because we don't trust the agents — because in a regulated environment, the human-in-the-loop isn't optional. It's the design.
-
-### The comprehension problem is the one most teams aren't answering yet.
-
-What that workflow surfaces is a harder question: what does "the engineer owns the judgment" actually mean when output arrives faster than it takes to properly review it? I call this comprehension debt — producing work you can't fully reproduce, debug, or defend. It's not a laziness problem. It's an ownership problem, and it shows up at the verification step.
-
-Getting that right is the actual engineering work of the agentic transition. The tooling is the easy part.
-
-### On the management side: AI literacy isn't binary, and the adoption pattern is telling.
-
-I have engineering managers working on their own workflows in parallel — automating repository context, release administration, system health aggregation. Useful things, in use, not experimental.
-
-The pattern I notice across both groups: the people who adopted AI without anxiety mostly started from a question, not a tool. They had something they were already frustrated by. The tool happened to fit. The people who are more cautious were often handed a tool and asked to find a use for it — which is a harder starting position and a slightly unfair one.
-
-Change management in an AI adoption context is mostly about surfacing the right first question. Not "can you use AI more" — but "what do you do every week that's tedious and low-judgment?" That's the surface area. The rest tends to follow.
-
-### The Staff Engineer Angle
-
-The junior developer frame doesn't scale up. Working with a Staff Engineer who is fluent in agents isn't management — it's something closer to architecture by division of labour.
+What became interesting wasn't that the workflow worked. It was that the quality of the outcome depended far less on the individual agents than on the structure surrounding them. The more explicit the constraints became, the more reliable the workflow became. That experience led me to a different concern.
 
 
-My Staff+ Engineers are the ones who go deep: designing the composable orchestration stack (deliberately open-source, deliberately legible — full engineering visibility over cost and vendor dependency), architecting the MCP governance layer that controls what agents can see and do at the access boundary rather than through prompt instructions that can be overridden, and building the ontology-backed knowledge model that lets agents answer dependency and ownership questions rather than keyword-match documents. That work requires being inside the codebase, close to the execution layer with me as their thinking partner.
+### Comprehension Debt
+Most discussions about AI focus on production. How much code can it generate? How much time can it save? The harder question is comprehension. I think of it as comprehension debt: producing work faster than you can understand, reproduce, debug, or defend it. The problem isn't that the code was written by an agent. The problem is that ownership still sits with the engineer reviewing it. If output arrives faster than understanding, the bottleneck hasn't disappeared. It has moved.
 
-What I own is the surface those tools run against. The architectural constraints they need to enforce. The business rules that have to survive a compliance review. The context that makes the difference between a skill that guides an engineer toward the right pattern and one that confidently produces the wrong thing. When I write a clear problem statement or define the boundary between two bounded contexts, I'm not doing less than my Staff Engineer — I'm doing the upstream work their agent skills depend on.
+## Where the Responsibility Moves
+The same shift shows up in engineering leadership.
 
-The productive dynamic isn't "Director manages Staff Engineer who manages agents." It's closer to parallel execution with a shared contract: they build the harness; I define what the harness enforces. The constraint I document today is the linter rule they ship next week. The architectural decision I make clearly enough to write down is the one the IDE agent can surface at the right moment.
+My Staff+ engineers spend their time building the harness: orchestration layers, governance boundaries, ontology-backed knowledge models, and the tooling that shapes what agents can see and do. My responsibility sits one layer higher: defining constraints, clarifying ownership, and making business rules explicit enough that they can survive contact with tooling. The constraint documented today becomes the policy tomorrow. The architectural decision written clearly enough becomes the IDE guidance surfaced at exactly the right moment. What looks like documentation often turns out to be infrastructure in waiting.
 
-What I've learned to watch for is drift between those two layers — cases where I've held a constraint informally (it's obvious, everyone knows it) and it hasn't made it into the tooling. That gap is where the junior developer frame breaks down entirely. No amount of well-managed agent workflow compensates for a constraint that was never made explicit. That part is mine to fix.
+That's why the junior developer analogy eventually stops being useful. The difficult part of the agentic transition isn't managing the agents. It's making the system explicit enough that they can operate safely inside it. Agents don't eliminate ambiguity. They expose it.
+
+The places where they struggle are often the same places where the organization was relying on shared understanding rather than shared definition. And no amount of orchestration compensates for a constraint that never made it into the system in the first place.

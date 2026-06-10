@@ -1,6 +1,6 @@
 /* Blog supplement — do not modify styles_grid2.css */
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .site-nav {
