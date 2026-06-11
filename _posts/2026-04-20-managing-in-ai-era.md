@@ -4,7 +4,7 @@ title: "Managing in the AI Era: Where the Responsibility Moves"
 date: 2026-05-05
 ---
 
-### The Junior Developer Analogy
+## The Junior Developer Analogy
 
 The most useful reframe I've found for working with AI agents is to treat them like junior developers. Not because they're equivalent. They're not. The analogy works because it encourages the right operational behavior. You don't hand a junior developer a vague ticket and disappear. You don't merge code without review. You don't assume silence means progress. Most of the time, silence means they're stuck, confused, or solving a different problem than the one you thought you gave them. The same pattern shows up with agents. Give them a poorly-defined problem and they'll often produce something technically reasonable that misses the intent entirely. The failure mode isn't incompetence. It's translation.
 
@@ -17,7 +17,7 @@ We saw this in our own experimentation. We run a small R&D guild, intentionally 
 What became interesting wasn't that the workflow worked. It was that the quality of the outcome depended far less on the individual agents than on the structure surrounding them. The more explicit the constraints became, the more reliable the workflow became. That experience led me to a different concern.
 
 
-### Comprehension Debt
+## Comprehension Debt
 Most discussions about AI focus on production. How much code can it generate? How much time can it save? The harder question is comprehension. I think of it as comprehension debt: producing work faster than you can understand, reproduce, debug, or defend it. The problem isn't that the code was written by an agent. The problem is that ownership still sits with the engineer reviewing it. If output arrives faster than understanding, the bottleneck hasn't disappeared. It has moved.
 
 ## Where the Responsibility Moves
