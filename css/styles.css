@@ -516,38 +516,6 @@ body.dark {
 }
 
 /* ============================================================= */
-/* Selected experience timeline                                  */
-/* ============================================================= */
-.timeline__row {
-  display: flex;
-  gap: var(--space-6);
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.timeline__item {
-  flex: 1;
-  min-width: 8rem;
-  border-top: 1px solid var(--rule);
-  padding-top: var(--space-2);
-}
-
-.timeline__year {
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  color: var(--stone);
-  display: block;
-  margin-bottom: var(--space-1);
-}
-
-.timeline__company {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.9375rem;
-  color: var(--ink);
-}
-
-/* ============================================================= */
 /* What guides my work — value cards                             */
 /* ============================================================= */
 .values__row {
@@ -916,10 +884,6 @@ body.dark {
 
   .values__row {
     grid-template-columns: 1fr;
-  }
-
-  .timeline__row {
-    flex-direction: column;
   }
 
   /* Journey band: horizontal scroll, all five accessible */
