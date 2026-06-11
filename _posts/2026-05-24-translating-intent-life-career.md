@@ -4,13 +4,13 @@ title: "The Same Translation Problem: Life and Technology"
 date: 2026-05-24
 ---
 
-### The Thing I've Been Doing My Whole Life Finally Has a Name
+## The Thing I've Been Doing My Whole Life Finally Has a Name
 
 I was building [Radian](https://radian-geometric-art.vercel.app) with AI, a geometric art project, and a UI modal wasn't rendering properly on mobile. I asked Claude Code to debug it. What followed was a CSS debugging loop that nearly burned through my daily token limit: each fix producing a new variant of the same problem, each iteration technically reasonable, none of them working. Eventually I interrupted it and asked for a UI refactor instead. The modal rendered in ~30 seconds. It understood exactly what I asked for but it didn't understand what I meant.
 
 I'd been here before. Not with AI.
 
-### Translation Isn't About Words
+## Translation Isn't About Words
 
 When I moved from the Balkans to the Middle East, I thought I knew how to communicate directly. I was wrong, but in a direction I hadn't anticipated.
 
@@ -24,7 +24,7 @@ The insight that took me too long to name is that the same signal produces a dif
 
 Translation isn't about the words. It's about what the receiver's frame will do with them.
 
-### Systems Speak in Dialects
+## Systems Speak in Dialects
 
 The same pattern shows up in software systems.
 
@@ -34,7 +34,7 @@ The real integration work is surfacing the implicit assumptions — the things e
 
 Translation here isn't a linguistic problem. It's an ontological one. You're not converting words. You're finding where the world models diverge.
 
-### Mergers Are Integration at Human Scale
+## Mergers Are Integration at Human Scale
 
 An acquisition is the same problem, larger and louder and wearing nicer clothes.  ([see ontology in a merger post.](/blog/2026/04/30/merging-organizations/))
 
@@ -48,7 +48,7 @@ The answer we've been building toward isn't a glossary. It's a shared vocabulary
 
 The more we worked on it, the more familiar the pattern became. This was the same thing I'd been doing between the Balkans, the Middle East, and Canada. The subject matter had changed. The problem hadn't. 
 
-### The Actual Skill
+## The Actual Skill
 
 Looking back, the CSS debugging loop wasn't a Claude Code failure. It was a translation failure — mine.
 

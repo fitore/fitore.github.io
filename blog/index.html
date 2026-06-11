@@ -1,23 +1,33 @@
 ---
 layout: default
-title: Personal Thinking Documents — Fitore Jaha Price
+title: Writing — Fitore Jaha Price
 ---
-<div class="blog-container">
-  <h1 class="heading name">Fitore's Blog - Personal Thinking Documents</h1>
-  <h2 class="heading"></h2>
+<section class="post">
+  <header class="post-header">
+    <span class="section-label">Writing</span>
+    <h1 class="post-title">Thinking Documents</h1>
+    <p class="post-subtitle">Notes on systems, organizations, and what happens when AI reshapes how engineering teams work.</p>
+    <hr class="post-header__rule">
+  </header>
+
   {% if site.posts.size == 0 %}
-    <p>No posts yet.</p>
+  <p class="writing-row__abstract">Nothing here yet.</p>
   {% else %}
-  <ul class="post-list">
+  <div class="writing">
     {% for post in site.posts %}
-    <li class="post-list-item">
-      <h3><a href="{{ post.url | relative_url }}" class="content-link">{{ post.title }}</a></h3>
-      <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-      {% if post.excerpt %}
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-    </li>
+    <a class="writing-row" href="{{ post.url | relative_url }}">
+      <span class="writing-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span>
+        <span class="writing-row__title">{{ post.title }}</span>
+        {% if post.description %}
+        <p class="writing-row__abstract">{{ post.description }}</p>
+        {% elsif post.excerpt %}
+        <p class="writing-row__abstract">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+      </span>
+      <span class="writing-row__cta">Read &rarr;</span>
+    </a>
     {% endfor %}
-  </ul>
+  </div>
   {% endif %}
-</div>
+</section>

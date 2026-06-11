@@ -1,17 +1,43 @@
 ---
 layout: default
 ---
-<div class="post-container">
-  <h1 class="heading name">Fitore's Blog</h1>
+<article class="post">
   <header class="post-header">
+    <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; All Writing</a>
+    <span class="post-header__date">{{ page.date | date: "%b %-d, %Y" }}</span>
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
-    <p class="post-meta"><br/><em>{{ page.info }}</em></p>
+    {% if page.description %}
+    <p class="post-subtitle">{{ page.description }}</p>
+    {% endif %}
+    <hr class="post-header__rule">
+    <p class="post-meta">
+      {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+      {% if page.tags and page.tags != empty %} &middot; {{ page.tags | join: ", " | upcase }}{% endif %}
+    </p>
   </header>
-  <div class="post-content">
+
+  <div class="post-body">
     {{ content }}
   </div>
-  <div class="post-back">
-    <a href="{{ '/blog/' | relative_url }}" class="content-link">&larr; All posts</a>
-  </div>
-</div>
+
+  {% if page.previous or page.next %}
+  <nav class="post-nav">
+    <div class="post-nav__item post-nav__item--prev">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}">
+        <span class="post-nav__label">&larr; Previous</span>
+        <span class="post-nav__title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+    <div class="post-nav__item post-nav__item--next">
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}">
+        <span class="post-nav__label">Next &rarr;</span>
+        <span class="post-nav__title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
+</article>
