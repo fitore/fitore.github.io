@@ -13,10 +13,8 @@ title: Fitore Jaha Price, Director of Engineering
     <p class="hero__role">Director of Engineering</p>
     <p class="hero__tagline">Building systems, teams, and organizations that adapt to change.</p>
     <p class="hero__body">
-      Engineering leader with 20+ years scaling products, platforms, and teams,
-      now focused on what happens when AI reshapes how engineering organizations
-      work. I find the most painful constraint in the system, build the minimum
-      version that proves the idea, and hand it off once it&rsquo;s real.
+        Engineering leader with 20+ years scaling products, platforms, and teams, 
+			  now focused on what happens when AI reshapes how engineering organizations work. 
     </p>
     <div class="hero__actions">
       <a href="{{ '/blog/' | relative_url }}" class="btn btn--primary">Read Writing</a>
@@ -29,43 +27,49 @@ title: Fitore Jaha Price, Director of Engineering
 </section>
 
 <!-- ============================================================= -->
-<!-- Journey band                                                  -->
+<!-- Journey-principles (four places, four principles)             -->
 <!-- ============================================================= -->
-<section class="journey">
-  <span class="journey__label">Four Continents</span>
-  <div class="journey__row">
-    <figure class="journey__item">
-      <img src="{{ '/images/journey-kosovo.png' | relative_url }}" alt="Kosovo alpine landscape">
-      <figcaption>Kosovo</figcaption>
-    </figure>
-    <figure class="journey__item">
-      <img src="{{ '/images/journey-jerusalem.png' | relative_url }}" alt="Jerusalem old city">
-      <figcaption>Jerusalem</figcaption>
-    </figure>
-    <figure class="journey__item">
-      <img src="{{ '/images/journey-auckland.png' | relative_url }}" alt="Auckland volcanic harbour">
-      <figcaption>Auckland</figcaption>
-    </figure>
-    <figure class="journey__item">
-      <img src="{{ '/images/journey-vancouver.png' | relative_url }}" alt="Vancouver inlet and mountains">
-      <figcaption>Vancouver</figcaption>
-    </figure>
-    <figure class="journey__item">
-      <img src="{{ '/images/journey-ontario.png' | relative_url }}" alt="Ontario escarpment and lake">
-      <figcaption>Ontario</figcaption>
-    </figure>
+<section class="journey-principles">
+  <div class="journey-principles__header">
+    <span class="journey-principles__label">Four Continents</span>
+    <span class="journey-principles__arc">Four places. The thinking they made necessary.</span>
+  </div>
+  <div class="journey-principles__grid">
+    <div class="journey-principles__item">
+      <img class="journey-principles__img" src="{{ '/images/journey-kosovo.png' | relative_url }}" alt="Kosovo alpine mountain valley">
+      <span class="journey-principles__principle">Learning</span>
+      <p class="journey-principles__description">Where it started &mdash; the lesson is in the origin.</p>
+      <span class="journey-principles__place">Kosovo</span>
+    </div>
+    <div class="journey-principles__item">
+      <img class="journey-principles__img" src="{{ '/images/journey-jerusalem.png' | relative_url }}" alt="Jerusalem through a stone arch">
+      <span class="journey-principles__principle">Translation</span>
+      <p class="journey-principles__description">Between worlds &mdash; meaning exists in the crossing.</p>
+      <span class="journey-principles__place">Jerusalem</span>
+    </div>
+    <div class="journey-principles__item">
+      <img class="journey-principles__img" src="{{ '/images/journey-auckland.png' | relative_url }}" alt="Auckland harbour and volcanic cone">
+      <span class="journey-principles__principle">Ownership</span>
+      <p class="journey-principles__description">Building with others &mdash; accountability is the foundation.</p>
+      <span class="journey-principles__place">Auckland</span>
+    </div>
+    <div class="journey-principles__item">
+      <img class="journey-principles__img" src="{{ '/images/journey-ontario.png' | relative_url }}" alt="Ontario escarpment and Lake Ontario">
+      <span class="journey-principles__principle">Adaptation</span>
+      <p class="journey-principles__description">Change is constant &mdash; systems must adapt.</p>
+      <span class="journey-principles__place">Ontario</span>
+    </div>
   </div>
 </section>
 
+<!-- ============================================================= -->
+<!-- Recent essays                                                 -->
+<!-- ============================================================= -->
 <hr class="section-rule">
-
-<!-- ============================================================= -->
-<!-- Current thinking / Essays                                     -->
-<!-- ============================================================= -->
 <section class="essays section">
   <div class="section-head">
-    <span class="section-label">Current Thinking</span>
-    <a href="{{ '/blog/' | relative_url }}" class="text-cta">View All Writing &rarr;</a>
+    <span class="section-label">Recent Writing</span>
+    <a href="{{ '/blog/' | relative_url }}" class="text-cta">View All Thinking Documents &rarr;</a>
   </div>
 
   {% for post in site.posts %}
@@ -84,7 +88,6 @@ title: Fitore Jaha Price, Director of Engineering
   {% endfor %}
 </section>
 
-<hr class="section-rule">
 
 <!-- ============================================================= -->
 <!-- About + Experience                                            -->
@@ -95,18 +98,23 @@ title: Fitore Jaha Price, Director of Engineering
       <span class="section-label">About</span>
     </div>
     <div class="about__body">
+
       <p>
-        I build the operating structures that make AI shippable in regulated
-        environments: governance scaffolding, semantic layers, and the developer
-        experience foundations that let teams move fast and stay auditable.
-      </p>
-      <p>
-        I think in systems, with deep care about the humans who are part of them.
-        Across four continents and two decades, the through-line has been the same:
-        translate intent into something a team can actually build.
-      </p>
+			  Engineering leader with 20+ years scaling products, platforms, and teams, 
+			  now focused on what happens when AI reshapes how engineering organizations work. 
+			  
+			  I build the operating structures that make AI shippable in regulated environments: 
+			  governance scaffolding, semantic layers, and the developer experience foundations that 
+			  let teams move fast and stay auditable. 
+			  
+			  </p>
+			  <p>
+			  I find the most painful constraint in the system, build the minimum version that proves the idea, and hand it off once it’s real. 
+			  
+			  I think in systems, with deep care about the humans who are part of them.
+             
+            </p>
     </div>
-    <p><a href="{{ '/blog/' | relative_url }}" class="text-cta">Read More About Me &rarr;</a></p>
   </div>
 
   <div class="experience" id="experience">
@@ -124,60 +132,32 @@ title: Fitore Jaha Price, Director of Engineering
     </div>
     <div class="career-row">
       <span>
+        <p class="career-row__company">Wave</p>
+        <p class="career-row__role">Senior Engineering Manager</p>
+      </span>
+      <span class="career-row__year">2017&ndash;2019</span>
+    </div>    
+    <div class="career-row">
+      <span>
         <p class="career-row__company">Wealthsimple</p>
-        <p class="career-row__role">Engineering Leadership</p>
+        <p class="career-row__role">Engineering Manager</p>
       </span>
       <span class="career-row__year">2021&ndash;2023</span>
     </div>
     <div class="career-row">
       <span>
         <p class="career-row__company">Canadian Digital Service</p>
-        <p class="career-row__role">Engineering Lead</p>
+        <p class="career-row__role">Engineering Manager & Principal Developer</p>
       </span>
       <span class="career-row__year">2019&ndash;2021</span>
     </div>
-    <div class="career-row">
-      <span>
-        <p class="career-row__company">Wave</p>
-        <p class="career-row__role">Engineering Manager</p>
-      </span>
-      <span class="career-row__year">2017&ndash;2019</span>
-    </div>
+
 
     <p><a href="{{ '/blog/' | relative_url }}" class="text-cta">View Full Experience &rarr;</a></p>
 
     <div class="experience__actions">
       <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--primary" rel="nofollow">Download Resume</a>
       <a href="https://www.linkedin.com/in/fitorejaha" class="btn btn--ghost" target="_blank" rel="nofollow">View LinkedIn</a>
-    </div>
-  </div>
-</section>
-
-<hr class="section-rule">
-
-<!-- ============================================================= -->
-<!-- What guides my work                                           -->
-<!-- ============================================================= -->
-<section class="values section">
-  <div class="section-head">
-    <span class="section-label">What Guides My Work</span>
-  </div>
-  <div class="values__row">
-    <div class="value-card">
-      <h3 class="value-card__title">Translation</h3>
-      <p class="value-card__body">Turning intent into systems a team can actually build, and back again.</p>
-    </div>
-    <div class="value-card">
-      <h3 class="value-card__title">Ownership</h3>
-      <p class="value-card__body">Build the minimum version that proves the idea, then hand it off once it&rsquo;s real.</p>
-    </div>
-    <div class="value-card">
-      <h3 class="value-card__title">Adaptation</h3>
-      <p class="value-card__body">Foundations that let teams move fast and stay auditable as the ground shifts.</p>
-    </div>
-    <div class="value-card">
-      <h3 class="value-card__title">Learning</h3>
-      <p class="value-card__body">Find the most painful constraint in the system and treat it as the lesson.</p>
     </div>
   </div>
 </section>

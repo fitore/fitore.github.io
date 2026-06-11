@@ -266,6 +266,7 @@ body.dark {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: var(--space-8);
+  padding-right: var(--margin-outer);
 }
 
 .hero__content {
@@ -333,16 +334,22 @@ body.dark {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   display: block;
+  /* Framed-photo mat — ~24px, expressed as a spacing token (no hardcoded px) */
+  border: var(--space-3) solid var(--rule);
 }
 
 /* ============================================================= */
-/* Journey band                                                  */
+/* Journey-principles (merged journey band + guiding principles) */
 /* ============================================================= */
-.journey {
-  padding: var(--space-8) var(--margin-outer);
+.journey-principles {
+  padding: var(--space-10) var(--margin-outer);
 }
 
-.journey__label {
+.journey-principles__header {
+  margin-bottom: var(--space-6);
+}
+
+.journey-principles__label {
   display: block;
   font-family: var(--font-body);
   font-weight: 500;
@@ -350,37 +357,63 @@ body.dark {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--stone);
-  margin-bottom: var(--space-4);
 }
 
-.journey__row {
+.journey-principles__arc {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--text-body-lg);
+  color: var(--stone);
+  margin-top: var(--space-1);
+}
+
+.journey-principles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.journey-principles__item {
   display: flex;
-  gap: var(--space-3);
-  align-items: flex-start;
+  flex-direction: column;
 }
 
-.journey__item {
-  flex: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.journey__item img {
+.journey-principles__img {
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
   display: block;
 }
 
-.journey__item figcaption {
+.journey-principles__principle {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: var(--text-meta);
+  font-size: var(--text-section-label);
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: var(--space-3);
+}
+
+.journey-principles__description {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-body);
+  color: var(--stone);
+  line-height: 1.5;
+  margin-top: var(--space-1);
+}
+
+.journey-principles__place {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-meta);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--stone);
   margin-top: var(--space-2);
-  text-align: left;
 }
 
 /* ============================================================= */
@@ -513,35 +546,6 @@ body.dark {
   flex-wrap: wrap;
   gap: var(--space-2);
   margin-top: var(--space-4);
-}
-
-/* ============================================================= */
-/* What guides my work — value cards                             */
-/* ============================================================= */
-.values__row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
-}
-
-.value-card {
-  border-top: 1px solid var(--rule);
-  padding-top: var(--space-2);
-}
-
-.value-card__title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--ink);
-  margin: 0 0 var(--space-1);
-}
-
-.value-card__body {
-  font-size: 0.875rem;
-  color: var(--stone);
-  line-height: 1.55;
-  margin: 0;
 }
 
 /* ============================================================= */
@@ -800,6 +804,10 @@ body.dark {
     gap: var(--space-4);
   }
 
+  .hero {
+    padding-right: 0;
+  }
+
   .hero__content {
     padding: var(--space-8) var(--margin-outer) var(--space-4);
   }
@@ -817,14 +825,9 @@ body.dark {
     gap: var(--space-6);
   }
 
-  .values__row {
+  /* Journey-principles: two columns, two rows */
+  .journey-principles__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Journey band: first three visible */
-  .journey__item:nth-child(4),
-  .journey__item:nth-child(5) {
-    display: none;
   }
 }
 
@@ -840,8 +843,15 @@ body.dark {
     letter-spacing: 0;
   }
 
+  /* Collapse the hero: tighter vertical rhythm on small screens */
+  .hero__content {
+    padding: var(--space-4) var(--margin-outer) var(--space-3);
+  }
+
+  /* Shrink the framed portrait so it reads as a thumbnail, not a banner */
   .hero__portrait img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 5;
+    max-width: 13rem;
   }
 
   /* Mobile nav: hamburger toggles the link list */
@@ -882,29 +892,13 @@ body.dark {
     justify-self: start;
   }
 
-  .values__row {
+  /* Journey-principles: single column stacked */
+  .journey-principles__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Journey band: horizontal scroll, all five accessible */
-  .journey__row {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    flex-wrap: nowrap;
-  }
-
-  .journey__row::-webkit-scrollbar {
-    display: none;
-  }
-
-  .journey__item {
-    flex: 0 0 10rem;
-    display: block;
-  }
-
-  .journey__item figcaption {
-    display: none;
+  .journey-principles {
+    padding: var(--space-8) var(--margin-outer);
   }
 
   /* Post prev/next stack */
