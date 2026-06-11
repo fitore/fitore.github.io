@@ -15,7 +15,11 @@
 </head>
 <body class="site">
   <nav class="nav">
-    <a href="{{ '/' | relative_url }}" class="nav__logo">Fitore</a>
+    <a href="{{ '/' | relative_url }}" class="nav__logo">
+      <span class="nav__logo-name">Fitore</span>
+      <span class="nav__logo-sep" aria-hidden="true"> &middot; </span>
+      <span class="nav__logo-initials">FJP</span>
+    </a>
     <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>

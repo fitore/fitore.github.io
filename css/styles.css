@@ -140,10 +140,33 @@ body.dark {
 }
 
 .nav__logo {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.nav__logo-name {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.125rem;
   color: var(--ink);
+}
+
+.nav__logo-sep {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--stone);
+  margin: 0 0.3em;
+}
+
+.nav__logo-initials {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-meta);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
 }
 
 .nav__links {
@@ -326,16 +349,23 @@ body.dark {
 }
 
 .hero__portrait {
-  align-self: stretch;
+  align-self: center;
 }
 
-.hero__portrait img {
+/* Border lives on the frame wrapper, padded off the image — never on the img */
+.hero__portrait-frame {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  padding: var(--space-4);
+  border: 1px solid var(--rule);
+}
+
+.hero__portrait-img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   display: block;
-  /* Framed-photo mat — ~24px, expressed as a spacing token (no hardcoded px) */
-  border: var(--space-3) solid var(--rule);
 }
 
 /* ============================================================= */
@@ -417,9 +447,9 @@ body.dark {
 }
 
 /* ============================================================= */
-/* Essays / Current thinking                                     */
+/* Recent writing                                                */
 /* ============================================================= */
-.essay-row {
+.writing-row {
   display: grid;
   grid-template-columns: 8rem 1fr auto;
   align-items: baseline;
@@ -429,30 +459,30 @@ body.dark {
   border-left: 2px solid transparent;
 }
 
-.essays .essay-row:last-of-type {
+.writing .writing-row:last-of-type {
   border-bottom: 1px solid var(--rule);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .essay-row { transition: border-color 150ms ease; }
-  .essay-row__title { transition: color 150ms ease; }
+  .writing-row { transition: border-color 150ms ease; }
+  .writing-row__title { transition: color 150ms ease; }
 }
 
-.essay-row:hover {
+.writing-row:hover {
   border-left: 2px solid var(--forest);
 }
 
-.essay-row:hover .essay-row__title {
+.writing-row:hover .writing-row__title {
   color: var(--forest);
 }
 
-.essay-row__date {
+.writing-row__date {
   font-family: var(--font-mono);
   font-size: var(--text-meta);
   color: var(--stone);
 }
 
-.essay-row__title {
+.writing-row__title {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: var(--text-essay-title);
@@ -461,14 +491,14 @@ body.dark {
   margin: 0 0 var(--space-1);
 }
 
-.essay-row__abstract {
+.writing-row__abstract {
   font-size: var(--text-body);
   color: var(--stone);
   margin: 0;
   max-width: 44rem;
 }
 
-.essay-row__cta {
+.writing-row__cta {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: var(--text-cta);
@@ -479,10 +509,10 @@ body.dark {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .essay-row__cta { transition: color 150ms ease; }
+  .writing-row__cta { transition: color 150ms ease; }
 }
 
-.essay-row:hover .essay-row__cta {
+.writing-row:hover .writing-row__cta {
   color: var(--ink);
 }
 
@@ -505,40 +535,40 @@ body.dark {
   margin: 0 0 var(--space-3);
 }
 
-.career-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  gap: var(--space-3);
-  padding: var(--space-3) 0;
-  border-top: 1px solid var(--rule);
+/* Career highlights — brand names only, no dates, no titles */
+.career-highlights {
+  margin-top: var(--space-4);
 }
 
-.career-row:last-of-type {
-  border-bottom: 1px solid var(--rule);
+.career-highlights__group {
+  margin-bottom: var(--space-4);
 }
 
-.career-row__company {
+.career-highlights__label {
+  display: block;
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.9375rem;
-  color: var(--ink);
-  margin: 0;
+  font-size: var(--text-meta);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: var(--space-1);
 }
 
-.career-row__role {
+.career-highlights__current {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-body);
+  color: var(--ink);
+}
+
+.career-highlights__list {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--stone);
+  line-height: 1.65;
   margin: 0;
-}
-
-.career-row__year {
-  font-family: var(--font-mono);
-  font-size: var(--text-meta);
-  color: var(--stone);
-  white-space: nowrap;
 }
 
 .experience__actions {
@@ -676,6 +706,8 @@ body.dark {
 
 .post-body {
   max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-body > p:first-of-type::first-letter {
@@ -816,8 +848,8 @@ body.dark {
     padding: 0 var(--margin-outer);
   }
 
-  .hero__portrait img {
-    aspect-ratio: 3 / 2;
+  .hero__portrait-frame {
+    width: 55%;
   }
 
   .about-experience {
@@ -849,9 +881,9 @@ body.dark {
   }
 
   /* Shrink the framed portrait so it reads as a thumbnail, not a banner */
-  .hero__portrait img {
-    aspect-ratio: 4 / 5;
-    max-width: 13rem;
+  .hero__portrait-frame {
+    width: auto;
+    max-width: 15rem;
   }
 
   /* Mobile nav: hamburger toggles the link list */
@@ -882,13 +914,13 @@ body.dark {
     position: relative;
   }
 
-  /* Essays stack */
-  .essay-row {
+  /* Writing rows stack */
+  .writing-row {
     grid-template-columns: 1fr;
     gap: var(--space-2);
   }
 
-  .essay-row__cta {
+  .writing-row__cta {
     justify-self: start;
   }
 

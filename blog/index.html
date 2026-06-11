@@ -6,26 +6,26 @@ title: Writing — Fitore Jaha Price
   <header class="post-header">
     <span class="section-label">Writing</span>
     <h1 class="post-title">Thinking Documents</h1>
-    <p class="post-subtitle">Essays on systems, organizations, and what happens when AI reshapes how engineering teams work.</p>
+    <p class="post-subtitle">Notes on systems, organizations, and what happens when AI reshapes how engineering teams work.</p>
     <hr class="post-header__rule">
   </header>
 
   {% if site.posts.size == 0 %}
-  <p class="essay-row__abstract">No posts yet.</p>
+  <p class="writing-row__abstract">Nothing here yet.</p>
   {% else %}
-  <div class="essays">
+  <div class="writing">
     {% for post in site.posts %}
-    <a class="essay-row" href="{{ post.url | relative_url }}">
-      <span class="essay-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a class="writing-row" href="{{ post.url | relative_url }}">
+      <span class="writing-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
       <span>
-        <span class="essay-row__title">{{ post.title }}</span>
+        <span class="writing-row__title">{{ post.title }}</span>
         {% if post.description %}
-        <p class="essay-row__abstract">{{ post.description }}</p>
+        <p class="writing-row__abstract">{{ post.description }}</p>
         {% elsif post.excerpt %}
-        <p class="essay-row__abstract">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <p class="writing-row__abstract">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
         {% endif %}
       </span>
-      <span class="essay-row__cta">Read Essay &rarr;</span>
+      <span class="writing-row__cta">Read &rarr;</span>
     </a>
     {% endfor %}
   </div>

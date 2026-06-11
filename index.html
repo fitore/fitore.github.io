@@ -22,7 +22,9 @@ title: Fitore Jaha Price, Director of Engineering
     </div>
   </div>
   <div class="hero__portrait">
-    <img src="{{ '/images/portrait-hero.jpeg' | relative_url }}" alt="Portrait of Fitore Jaha Price">
+    <div class="hero__portrait-frame">
+      <img class="hero__portrait-img" src="{{ '/images/portrait-hero.jpeg' | relative_url }}" alt="Fitore Jaha Price">
+    </div>
   </div>
 </section>
 
@@ -63,27 +65,27 @@ title: Fitore Jaha Price, Director of Engineering
 </section>
 
 <!-- ============================================================= -->
-<!-- Recent essays                                                 -->
+<!-- Recent writing                                                -->
 <!-- ============================================================= -->
 <hr class="section-rule">
-<section class="essays section">
+<section class="writing section">
   <div class="section-head">
     <span class="section-label">Recent Writing</span>
     <a href="{{ '/blog/' | relative_url }}" class="text-cta">View All Thinking Documents &rarr;</a>
   </div>
 
   {% for post in site.posts %}
-  <a class="essay-row" href="{{ post.url | relative_url }}">
-    <span class="essay-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <a class="writing-row" href="{{ post.url | relative_url }}">
+    <span class="writing-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
     <span>
-      <span class="essay-row__title">{{ post.title }}</span>
+      <span class="writing-row__title">{{ post.title }}</span>
       {% if post.description %}
-      <p class="essay-row__abstract">{{ post.description }}</p>
+      <p class="writing-row__abstract">{{ post.description }}</p>
       {% elsif post.excerpt %}
-      <p class="essay-row__abstract">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      <p class="writing-row__abstract">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
       {% endif %}
     </span>
-    <span class="essay-row__cta">Read Essay &rarr;</span>
+    <span class="writing-row__cta">Read &rarr;</span>
   </a>
   {% endfor %}
 </section>
@@ -122,38 +124,19 @@ title: Fitore Jaha Price, Director of Engineering
       <span class="section-label">Career Highlights</span>
     </div>
 
-    <!-- NOTE: role titles confirmed from prior site; year ranges are placeholders — verify -->
-    <div class="career-row">
-      <span>
-        <p class="career-row__company">EQ Bank</p>
-        <p class="career-row__role">Director of Engineering &mdash; Retail Banking &amp; Communities</p>
-      </span>
-      <span class="career-row__year">2023&ndash;Now</span>
+    <div class="career-highlights">
+      <div class="career-highlights__group">
+        <span class="career-highlights__label">Currently</span>
+        <span class="career-highlights__current">EQ Bank</span>
+      </div>
+      <div class="career-highlights__group">
+        <span class="career-highlights__label">Previously</span>
+        <p class="career-highlights__list">
+          Wealthsimple, Wave, CBC&nbsp;/&nbsp;Radio-Canada, Canadian Digital Service,
+          Vodafone&nbsp;NZ, Global&nbsp;TV, Vancity
+        </p>
+      </div>
     </div>
-    <div class="career-row">
-      <span>
-        <p class="career-row__company">Wave</p>
-        <p class="career-row__role">Senior Engineering Manager</p>
-      </span>
-      <span class="career-row__year">2017&ndash;2019</span>
-    </div>    
-    <div class="career-row">
-      <span>
-        <p class="career-row__company">Wealthsimple</p>
-        <p class="career-row__role">Engineering Manager</p>
-      </span>
-      <span class="career-row__year">2021&ndash;2023</span>
-    </div>
-    <div class="career-row">
-      <span>
-        <p class="career-row__company">Canadian Digital Service</p>
-        <p class="career-row__role">Engineering Manager & Principal Developer</p>
-      </span>
-      <span class="career-row__year">2019&ndash;2021</span>
-    </div>
-
-
-    <p><a href="{{ '/blog/' | relative_url }}" class="text-cta">View Full Experience &rarr;</a></p>
 
     <div class="experience__actions">
       <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--primary" rel="nofollow">Download Resume</a>

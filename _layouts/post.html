@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post">
   <header class="post-header">
-    <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; All Essays</a>
+    <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; All Writing</a>
     <span class="post-header__date">{{ page.date | date: "%b %-d, %Y" }}</span>
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.description %}
@@ -25,7 +25,7 @@ layout: default
     <div class="post-nav__item post-nav__item--prev">
       {% if page.previous %}
       <a href="{{ page.previous.url | relative_url }}">
-        <span class="post-nav__label">&larr; Previous Essay</span>
+        <span class="post-nav__label">&larr; Previous</span>
         <span class="post-nav__title">{{ page.previous.title }}</span>
       </a>
       {% endif %}
@@ -33,7 +33,7 @@ layout: default
     <div class="post-nav__item post-nav__item--next">
       {% if page.next %}
       <a href="{{ page.next.url | relative_url }}">
-        <span class="post-nav__label">Next Essay &rarr;</span>
+        <span class="post-nav__label">Next &rarr;</span>
         <span class="post-nav__title">{{ page.next.title }}</span>
       </a>
       {% endif %}

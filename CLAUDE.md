@@ -32,13 +32,16 @@ Violation = a hardcoded value that breaks on user font-size changes.
 - No inline styles
 - All transitions in @media (prefers-reduced-motion: no-preference)
 - No CSS filter on portrait image (duotone is baked into image file)
-- Portrait does not bleed to viewport edge — contained in column with 1px solid var(--rule) border
+- Portrait does not bleed to viewport edge — ~70% column width, centered, padded
+- Portrait border is on the frame wrapper div (.hero__portrait-frame), not the img
+- No word "essay" or "essays" in any HTML output — use "writing" throughout
+- Post body is centered (margin auto) on large screens, not flush left
 
 ## Colour
 --amber is the warm accent throughout. Used on:
-  primary CTA buttons, READ ESSAY arrows, inline text CTAs,
+  primary CTA buttons, READ → arrows on writing rows, inline text CTAs,
   hero rule, nav active underline.
---forest: essay row hover only. Invisible at rest.
+--forest: writing row hover only. Invisible at rest.
 --ink as background: footer only.
 --navy: not in the palette. Do not introduce it.
 Never use --ink at reduced opacity in place of --stone.
@@ -49,8 +52,20 @@ RESUME links to /FitoreJahaPrice_Resume2026.pdf, target="_blank".
 No CONTACT link in the footer.
 
 ## Logo
-The site logo is "Fitore" — Cormorant Garamond 700.
-Update wherever the old monogram appeared, including footer.
+Nav logo: "Fitore · FJP"
+  - "Fitore": Cormorant Garamond 700, 1.125rem, --ink
+  - "·": Inter 400, --stone, margin 0 0.3em
+  - "FJP": Inter 500, var(--text-meta), 0.1em tracked, uppercase, --stone
+Footer logo: "Fitore" only — no FJP in footer.
+
+## Career highlights
+No dates. No titles. Brand names only.
+Two groups with spaced-caps labels:
+  CURRENTLY → EQ Bank (own line, --ink weight 500)
+  PREVIOUSLY → Wealthsimple, Wave, CBC / Radio-Canada, Canadian Digital
+               Service, Vodafone NZ, Global TV, Vancity
+               (inline comma-separated, --stone weight 400)
+No table. No row dividers. No JetBrains Mono for this section.
 
 ## Typography signature
 Home display name: Cormorant Garamond 300, 6rem, letter-spacing −0.02em,
@@ -72,10 +87,10 @@ No hover states. No lightbox. No interactivity.
 ## Scope — do not touch
 - _posts/ (any .md file)
 - _config.yml
-- blog/ directory
 - css/blog.css, css/styles_grid.css, css/styles_grid2.css
 - CNAME, Gemfile, LICENSE
 - FitoreJahaPrice_Resume2026.pdf
+(blog/index.html is in scope: it shares the redesign — writing list, no "essay" wording)
 
 ## Assets in /images/
 - portrait-hero.jpeg — no CSS filter, amber duotone baked into file
