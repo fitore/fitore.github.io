@@ -1,0 +1,355 @@
+:root {
+  --ink: #111827;
+  --ink-soft: #374151;
+  --ink-muted: #6b7280;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --rule: #d8d8d0;
+  --blue: #064f86;
+  --blue-deep: #08285f;
+
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.5;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.9), transparent 28rem),
+    var(--paper);
+}
+
+a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--blue-deep);
+}
+
+.site-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-left: clamp(4.5rem, 12vw, 13rem);
+}
+
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem clamp(1.25rem, 5vw, 5rem) 0;
+}
+
+.nav {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--blue);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.nav-link-active {
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.25rem;
+}
+
+.homepage {
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 5rem) 2rem;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: minmax(15rem, 20rem) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(216, 216, 208, 0.8);
+  border-radius: 2rem;
+  box-shadow:
+    0 1.25rem 4rem rgba(17, 24, 39, 0.06),
+    0 0.25rem 1rem rgba(17, 24, 39, 0.04);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.portrait-wrap {
+  width: clamp(9rem, 18vw, 13rem);
+  aspect-ratio: 1;
+  margin-bottom: 2rem;
+  border-radius: 999px;
+  padding: 0.35rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  box-shadow: 0 0.75rem 2rem rgba(17, 24, 39, 0.16);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  max-width: 10ch;
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: #090d1f;
+}
+
+.role {
+  margin: 1rem 0 1.5rem;
+  color: #111827;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.contact-line {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+  min-width: 0;
+  padding-left: clamp(0rem, 3vw, 2.5rem);
+  border-left: 1px solid var(--rule);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--blue-deep);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lede {
+  max-width: 18ch;
+  margin: 0 0 1.25rem;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #090d1f;
+}
+
+.about p:not(.eyebrow):not(.lede),
+.panel p {
+  max-width: 64ch;
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+}
+
+.about p:last-child,
+.panel p:last-child {
+  margin-bottom: 0;
+}
+
+.lower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2.25rem);
+  border-top: 1px solid var(--rule);
+}
+
+.panel {
+  min-width: 0;
+}
+
+.panel + .panel {
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+  border-left: 1px solid var(--rule);
+}
+
+.company-list {
+  color: var(--ink-muted);
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.action-link span {
+  transform: translateY(-0.02em);
+}
+
+.site-footer {
+  padding: 1.75rem clamp(1.25rem, 5vw, 5rem) 2rem;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Decorative ribbon */
+
+.brand-ribbon {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: clamp(5rem, 13vw, 13rem);
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent;
+}
+
+.arc {
+  position: absolute;
+  left: -8.5rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+      circle at center,
+      transparent 0,
+      transparent 0.85rem,
+      currentColor 0.9rem,
+      currentColor 1.18rem
+    );
+  -webkit-mask:
+    radial-gradient(circle at center, transparent 0 44%, #000 44.5% 64%, transparent 64.5%);
+  mask:
+    radial-gradient(circle at center, transparent 0 44%, #000 44.5% 64%, transparent 64.5%);
+}
+
+.arc-purple {
+  top: -5.5rem;
+  color: #8246a3;
+}
+
+.arc-cyan {
+  top: 4rem;
+  color: #2fa6b3;
+}
+
+.arc-red {
+  top: 14rem;
+  color: #f02b13;
+}
+
+.arc-green {
+  top: 25rem;
+  color: #4f942b;
+}
+
+.arc-blue {
+  top: 38rem;
+  color: #075f98;
+}
+
+.arc-violet {
+  top: 52rem;
+  color: #7f3a98;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .site-shell {
+    padding-left: 0;
+  }
+
+  .brand-ribbon {
+    position: fixed;
+    width: 4rem;
+    opacity: 0.28;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .identity {
+    align-items: flex-start;
+  }
+
+  .content {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 2rem;
+  }
+
+  h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding-top: 1.25rem;
+  }
+
+  .homepage {
+    padding-top: 2rem;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel + .panel {
+    padding-left: 0;
+    padding-top: 1.5rem;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .lede {
+    max-width: none;
+  }
+}

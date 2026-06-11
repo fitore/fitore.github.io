@@ -1,44 +1,222 @@
 ---
 layout: default
-title: Fitore Jaha Price, Senior Engineering Leader
+title: Fitore Jaha Price, Director of Engineering
 ---
-<div class="grid">
 
-	<section class="grid-content profile">
-		<div class="photo">
-			<img src="images/fjp_pic.jpeg" alt="Fitore Jaha Price" class="profile-image" />
-		</div>
+<!-- ============================================================= -->
+<!-- Hero                                                          -->
+<!-- ============================================================= -->
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__name">FITORE<br>JAHA PRICE</h1>
+    <hr class="hero__rule">
+    <p class="hero__role">Director of Engineering</p>
+    <p class="hero__tagline">Building systems, teams, and organizations that adapt to change.</p>
+    <p class="hero__body">
+      Engineering leader with 20+ years scaling products, platforms, and teams,
+      now focused on what happens when AI reshapes how engineering organizations
+      work. I find the most painful constraint in the system, build the minimum
+      version that proves the idea, and hand it off once it&rsquo;s real.
+    </p>
+    <div class="hero__actions">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn--primary">Read Writing</a>
+      <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--ghost" rel="nofollow">View Resume &darr;</a>
+    </div>
+  </div>
+  <div class="hero__portrait">
+    <img src="{{ '/images/portrait-hero.jpeg' | relative_url }}" alt="Portrait of Fitore Jaha Price">
+  </div>
+</section>
 
-		<h1 class="heading name">Fitore Jaha Price</h1>
-		<h2 class="heading">Senior Engineering Leader</h2>
-		<p>Find me on <a href="https://www.linkedin.com/in/fitorejaha" target="_blank" rel="nofollow" class="content-link social-link">LinkedIn</a>
-			or
-			<a href="https://twitter.com/tirofe" target="_blank" rel="nofollow" class="content-link social-link">Twitter</a>
-		</p>
-	</section>
-	<section class="grid-content about">
-		<h2 class="heading">About me</h2>
-		
-		<p>
-			Engineering leader with 20+ years scaling products, platforms, and teams, now focused on what happens when AI reshapes how engineering organizations work. I build the operating structures that make AI shippable in regulated environments: governance scaffolding, semantic layers, and the developer experience foundations that let teams move fast and stay auditable. I find the most painful constraint in the system, build the minimum version that proves the idea, and hand it off once it’s real. I think in systems, with deep care about the humans who are part of them.
-		</p>
-		<p>
-			Here are some of my thinking documents: <a href="/blog/" class="content-link">Fitore's Blog</a>.	
-		</p>
-		<p>
-			And a selection of companies I've worked with:
-		</p>
-		<ul class="employer-list">
-			<li class="employer-item">Currently, as a Director of Engineering, I lead Retail Banking & Communities product engineering teams and FE+BE cross-functional Guilds at <a href="https://www.eqbank.ca/" rel="nofollow" target="employer" class="content-link">EQ Bank</a></li>
-			<li class="employer-item">Previous employers include <a href="https://www.waveapps.com/" rel="nofollow" target="employer" class="content-link">Wave HQ</a>,
-			<a href="https://www.wealthsimple.com/" rel="nofollow" target="employer" class="content-link">Wealthsimple</a>,
-			<a href="https://digital.canada.ca/" rel="nofollow" target="employer" class="content-link">Canadian Digital Service</a>,
-			<a href="http://www.cbc.ca/" rel="nofollow" target="employer" class="content-link">CBC</a>/Radio-Canada, <a href="http://www.vodafone.co.nz" rel="nofollow" target="employer" title="Visit Vodafone" class="content-link">Vodafone NZ</a>,
-			<a href="https://www.globaltv.com/" rel="nofollow" target="employer" title="Visit Global TV" class="content-link">Global TV</a> (Shaw Media/Corus),
-			<a href="https://www.vancity.com/" rel="nofollow" target="employer" title="Visit Central 1" class="content-link">Vancity</a> (Central 1 Credit Union) etc.</li>
-		</ul>
+<!-- ============================================================= -->
+<!-- Journey band                                                  -->
+<!-- ============================================================= -->
+<section class="journey">
+  <span class="journey__label">Four Continents</span>
+  <div class="journey__row">
+    <figure class="journey__item">
+      <img src="{{ '/images/journey-kosovo.png' | relative_url }}" alt="Kosovo alpine landscape">
+      <figcaption>Kosovo</figcaption>
+    </figure>
+    <figure class="journey__item">
+      <img src="{{ '/images/journey-jerusalem.png' | relative_url }}" alt="Jerusalem old city">
+      <figcaption>Jerusalem</figcaption>
+    </figure>
+    <figure class="journey__item">
+      <img src="{{ '/images/journey-auckland.png' | relative_url }}" alt="Auckland volcanic harbour">
+      <figcaption>Auckland</figcaption>
+    </figure>
+    <figure class="journey__item">
+      <img src="{{ '/images/journey-vancouver.png' | relative_url }}" alt="Vancouver inlet and mountains">
+      <figcaption>Vancouver</figcaption>
+    </figure>
+    <figure class="journey__item">
+      <img src="{{ '/images/journey-ontario.png' | relative_url }}" alt="Ontario escarpment and lake">
+      <figcaption>Ontario</figcaption>
+    </figure>
+  </div>
+</section>
 
-		<p>For more details, here's a PDF version of my <a href="FitoreJahaPrice_Resume2026.pdf" rel="nofollow" class="content-link">resume</a>.</p>
-	</section>
+<hr class="section-rule">
 
-</div>
+<!-- ============================================================= -->
+<!-- Current thinking / Essays                                     -->
+<!-- ============================================================= -->
+<section class="essays section">
+  <div class="section-head">
+    <span class="section-label">Current Thinking</span>
+    <a href="{{ '/blog/' | relative_url }}" class="text-cta">View All Writing &rarr;</a>
+  </div>
+
+  {% for post in site.posts %}
+  <a class="essay-row" href="{{ post.url | relative_url }}">
+    <span class="essay-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <span>
+      <span class="essay-row__title">{{ post.title }}</span>
+      {% if post.description %}
+      <p class="essay-row__abstract">{{ post.description }}</p>
+      {% elsif post.excerpt %}
+      <p class="essay-row__abstract">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      {% endif %}
+    </span>
+    <span class="essay-row__cta">Read Essay &rarr;</span>
+  </a>
+  {% endfor %}
+</section>
+
+<hr class="section-rule">
+
+<!-- ============================================================= -->
+<!-- About + Experience                                            -->
+<!-- ============================================================= -->
+<section class="about-experience section">
+  <div class="about" id="about">
+    <div class="section-head">
+      <span class="section-label">About</span>
+    </div>
+    <div class="about__body">
+      <p>
+        I build the operating structures that make AI shippable in regulated
+        environments: governance scaffolding, semantic layers, and the developer
+        experience foundations that let teams move fast and stay auditable.
+      </p>
+      <p>
+        I think in systems, with deep care about the humans who are part of them.
+        Across four continents and two decades, the through-line has been the same:
+        translate intent into something a team can actually build.
+      </p>
+    </div>
+    <p><a href="{{ '/blog/' | relative_url }}" class="text-cta">Read More About Me &rarr;</a></p>
+  </div>
+
+  <div class="experience" id="experience">
+    <div class="section-head">
+      <span class="section-label">Career Highlights</span>
+    </div>
+
+    <!-- NOTE: role titles confirmed from prior site; year ranges are placeholders — verify -->
+    <div class="career-row">
+      <span>
+        <p class="career-row__company">EQ Bank</p>
+        <p class="career-row__role">Director of Engineering &mdash; Retail Banking &amp; Communities</p>
+      </span>
+      <span class="career-row__year">2023&ndash;Now</span>
+    </div>
+    <div class="career-row">
+      <span>
+        <p class="career-row__company">Wealthsimple</p>
+        <p class="career-row__role">Engineering Leadership</p>
+      </span>
+      <span class="career-row__year">2021&ndash;2023</span>
+    </div>
+    <div class="career-row">
+      <span>
+        <p class="career-row__company">Canadian Digital Service</p>
+        <p class="career-row__role">Engineering Lead</p>
+      </span>
+      <span class="career-row__year">2019&ndash;2021</span>
+    </div>
+    <div class="career-row">
+      <span>
+        <p class="career-row__company">Wave</p>
+        <p class="career-row__role">Engineering Manager</p>
+      </span>
+      <span class="career-row__year">2017&ndash;2019</span>
+    </div>
+
+    <p><a href="{{ '/blog/' | relative_url }}" class="text-cta">View Full Experience &rarr;</a></p>
+
+    <div class="experience__actions">
+      <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--primary" rel="nofollow">Download Resume</a>
+      <a href="https://www.linkedin.com/in/fitorejaha" class="btn btn--ghost" target="_blank" rel="nofollow">View LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ============================================================= -->
+<!-- Selected experience timeline                                  -->
+<!-- ============================================================= -->
+<section class="timeline section">
+  <div class="section-head">
+    <span class="section-label">Selected Experience</span>
+    <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="text-cta" rel="nofollow">View Full Timeline &rarr;</a>
+  </div>
+  <!-- NOTE: year ranges are placeholders — verify against resume -->
+  <div class="timeline__row">
+    <div class="timeline__item">
+      <span class="timeline__year">2023&ndash;Now</span>
+      <span class="timeline__company">EQ Bank</span>
+    </div>
+    <div class="timeline__item">
+      <span class="timeline__year">2021&ndash;2023</span>
+      <span class="timeline__company">Wealthsimple</span>
+    </div>
+    <div class="timeline__item">
+      <span class="timeline__year">2019&ndash;2021</span>
+      <span class="timeline__company">Canadian Digital Service</span>
+    </div>
+    <div class="timeline__item">
+      <span class="timeline__year">2015&ndash;2019</span>
+      <span class="timeline__company">CBC / Radio-Canada</span>
+    </div>
+    <div class="timeline__item">
+      <span class="timeline__year">2012&ndash;2015</span>
+      <span class="timeline__company">Vodafone NZ</span>
+    </div>
+    <div class="timeline__item">
+      <span class="timeline__year">2008&ndash;2012</span>
+      <span class="timeline__company">Vancity</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ============================================================= -->
+<!-- What guides my work                                           -->
+<!-- ============================================================= -->
+<section class="values section">
+  <div class="section-head">
+    <span class="section-label">What Guides My Work</span>
+  </div>
+  <div class="values__row">
+    <div class="value-card">
+      <h3 class="value-card__title">Translation</h3>
+      <p class="value-card__body">Turning intent into systems a team can actually build, and back again.</p>
+    </div>
+    <div class="value-card">
+      <h3 class="value-card__title">Ownership</h3>
+      <p class="value-card__body">Build the minimum version that proves the idea, then hand it off once it&rsquo;s real.</p>
+    </div>
+    <div class="value-card">
+      <h3 class="value-card__title">Adaptation</h3>
+      <p class="value-card__body">Foundations that let teams move fast and stay auditable as the ground shifts.</p>
+    </div>
+    <div class="value-card">
+      <h3 class="value-card__title">Learning</h3>
+      <p class="value-card__body">Find the most painful constraint in the system and treat it as the lesson.</p>
+    </div>
+  </div>
+</section>
