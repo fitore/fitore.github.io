@@ -3,7 +3,7 @@ layout: default
 title: Writing — Fitore Jaha Price
 ---
 <section class="post">
-  <header class="post-header">
+  <header class="post-header page-shell">
     <span class="section-label">Writing</span>
     <h1 class="post-title">Thinking Documents</h1>
     <p class="post-subtitle">Notes on systems, organizations, and what happens when AI reshapes how engineering teams work.</p>
@@ -13,7 +13,7 @@ title: Writing — Fitore Jaha Price
   {% if site.posts.size == 0 %}
   <p class="writing-row__abstract">Nothing here yet.</p>
   {% else %}
-  <div class="writing">
+  <div class="writing page-shell">
     {% for post in site.posts %}
     <a class="writing-row" href="{{ post.url | relative_url }}">
       <span class="writing-row__date">{{ post.date | date: "%b %-d, %Y" }}</span>

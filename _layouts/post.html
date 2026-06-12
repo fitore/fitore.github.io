@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="post">
-  <header class="post-header">
+  <header class="post-header page-shell">
     <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; All Writing</a>
     <span class="post-header__date">{{ page.date | date: "%b %-d, %Y" }}</span>
     <h1 class="post-title">{{ page.title }}</h1>
@@ -16,12 +16,12 @@ layout: default
     </p>
   </header>
 
-  <div class="post-body">
+  <div class="post-body article-shell">
     {{ content }}
   </div>
 
   {% if page.previous or page.next %}
-  <nav class="post-nav">
+  <nav class="post-nav page-shell">
     <div class="post-nav__item post-nav__item--prev">
       {% if page.previous %}
       <a href="{{ page.previous.url | relative_url }}">
