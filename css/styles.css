@@ -22,7 +22,7 @@ html {
   --text-post-title:        3rem;
   --text-post-title-mobile: 2rem;
   --text-section-label:     0.8125rem;
-  --text-essay-title:       1.375rem;
+  --text-writing-title:     1.375rem;
   --text-h2:                1.625rem;
   --text-body-lg:           1.125rem;
   --text-body:              1rem;
@@ -39,8 +39,29 @@ html {
   --space-10: 5rem;
 
   /* Layout */
-  --content-max:  75rem;
-  --margin-outer: 5rem;
+  --container-max:      76rem;
+  --container-readable: 44rem;
+  --margin-outer:       clamp(1.25rem, 4vw, 4rem);
+}
+
+/* ============================================================= */
+/* Container shells — backgrounds full-bleed, content contained  */
+/* ============================================================= */
+.page-shell {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--margin-outer);
+}
+
+.article-shell {
+  max-width: var(--container-readable);
+  margin-inline: auto;
+  padding-inline: var(--margin-outer);
+}
+
+.wide-figure {
+  max-width: var(--container-max);
+  margin-inline: auto;
 }
 
 /* ============================================================= */
@@ -83,7 +104,7 @@ body.dark {
 /* Shared section primitives                                     */
 /* ============================================================= */
 .section {
-  padding: var(--space-8) var(--margin-outer);
+  padding-block: var(--space-8);
 }
 
 .section-head {
@@ -121,12 +142,16 @@ body.dark {
   color: var(--ink);
 }
 
-/* Section break between major home sections */
+/* Section break between major home sections — line aligns with content */
 .section-rule {
-  border: none;
-  border-top: 1px solid var(--ink);
+  margin-block: var(--space-8);
+}
+
+.section-rule__line {
+  display: block;
+  height: 1px;
+  background: var(--ink);
   opacity: 0.15;
-  margin: var(--space-8) var(--margin-outer);
 }
 
 /* ============================================================= */
@@ -136,7 +161,7 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-3) var(--margin-outer);
+  padding-block: var(--space-3);
 }
 
 .nav__logo {
@@ -289,11 +314,10 @@ body.dark {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: var(--space-8);
-  padding-right: var(--margin-outer);
 }
 
 .hero__content {
-  padding: var(--space-10) 0 var(--space-10) var(--margin-outer);
+  padding-block: var(--space-10);
 }
 
 .hero__name {
@@ -365,6 +389,7 @@ body.dark {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -372,7 +397,7 @@ body.dark {
 /* Journey-principles (merged journey band + guiding principles) */
 /* ============================================================= */
 .journey-principles {
-  padding: var(--space-10) var(--margin-outer);
+  padding-block: var(--space-10);
 }
 
 .journey-principles__header {
@@ -485,7 +510,7 @@ body.dark {
 .writing-row__title {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: var(--text-essay-title);
+  font-size: var(--text-writing-title);
   line-height: 1.25;
   color: var(--ink);
   margin: 0 0 var(--space-1);
@@ -583,12 +608,15 @@ body.dark {
 /* ============================================================= */
 .footer {
   background: var(--ink);
+}
+
+.footer__inner {
   min-height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  padding: var(--space-2) var(--margin-outer);
+  padding-block: var(--space-2);
   flex-wrap: wrap;
 }
 
@@ -635,11 +663,10 @@ body.dark {
 /* Post layout                                                   */
 /* ============================================================= */
 .post {
-  padding: var(--space-8) var(--margin-outer);
+  padding-block: var(--space-8);
 }
 
 .post-header {
-  max-width: 40rem;
   margin-bottom: var(--space-6);
 }
 
@@ -702,12 +729,6 @@ body.dark {
   color: var(--stone);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-
-.post-body {
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .post-body > p:first-of-type::first-letter {
@@ -827,25 +848,13 @@ body.dark {
 /* Responsive — Tablet (48rem–74.9rem)                           */
 /* ============================================================= */
 @media (max-width: 74.9375rem) {
-  :root {
-    --margin-outer: 2.5rem;
-  }
-
   .hero {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
 
-  .hero {
-    padding-right: 0;
-  }
-
   .hero__content {
-    padding: var(--space-8) var(--margin-outer) var(--space-4);
-  }
-
-  .hero__portrait {
-    padding: 0 var(--margin-outer);
+    padding-block: var(--space-8) var(--space-4);
   }
 
   .hero__portrait-frame {
@@ -867,17 +876,13 @@ body.dark {
 /* Responsive — Mobile (<48rem)                                  */
 /* ============================================================= */
 @media (max-width: 47.9375rem) {
-  :root {
-    --margin-outer: 1.25rem;
-  }
-
   .hero__name {
     letter-spacing: 0;
   }
 
   /* Collapse the hero: tighter vertical rhythm on small screens */
   .hero__content {
-    padding: var(--space-4) var(--margin-outer) var(--space-3);
+    padding-block: var(--space-4) var(--space-3);
   }
 
   /* Shrink the framed portrait so it reads as a thumbnail, not a banner */
@@ -930,7 +935,7 @@ body.dark {
   }
 
   .journey-principles {
-    padding: var(--space-8) var(--margin-outer);
+    padding-block: var(--space-8);
   }
 
   /* Post prev/next stack */
@@ -945,7 +950,7 @@ body.dark {
   }
 
   /* Footer stacks */
-  .footer {
+  .footer__inner {
     flex-direction: column;
     align-items: flex-start;
   }

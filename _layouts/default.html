@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}" />
 </head>
 <body class="site">
-  <nav class="nav">
+  <nav class="nav page-shell">
     <a href="{{ '/' | relative_url }}" class="nav__logo">
       <span class="nav__logo-name">Fitore</span>
       <span class="nav__logo-sep" aria-hidden="true"> &middot; </span>
@@ -34,13 +34,15 @@
   {{ content }}
 
   <footer class="footer">
-    <a href="{{ '/' | relative_url }}" class="footer__logo">Fitore</a>
-    <span class="footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</span>
-    <ul class="footer__links">
-      <li><a href="https://www.linkedin.com/in/fitorejaha" class="footer__link" target="_blank" rel="nofollow">LinkedIn</a></li>
-      <li><a href="https://twitter.com/tirofe" class="footer__link" target="_blank" rel="nofollow">X</a></li>
-      <li><a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="footer__link" target="_blank" rel="nofollow">Resume</a></li>
-    </ul>
+    <div class="footer__inner page-shell">
+      <a href="{{ '/' | relative_url }}" class="footer__logo">Fitore</a>
+      <span class="footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</span>
+      <ul class="footer__links">
+        <li><a href="https://www.linkedin.com/in/fitorejaha" class="footer__link" target="_blank" rel="nofollow">LinkedIn</a></li>
+        <li><a href="https://twitter.com/tirofe" class="footer__link" target="_blank" rel="nofollow">X</a></li>
+        <li><a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="footer__link" target="_blank" rel="nofollow">Resume</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script>
