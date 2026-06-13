@@ -7,26 +7,54 @@ title: Fitore Jaha Price, Director of Engineering
 <!-- Hero                                                          -->
 <!-- ============================================================= -->
 <section class="hero page-shell">
-  <div class="hero__content">
+  <div class="hero__left" id="about">
     <h1 class="hero__name">FITORE<br>JAHA PRICE</h1>
     <hr class="hero__rule">
     <p class="hero__role">Director of Engineering</p>
     <p class="hero__tagline">Building systems, teams, and organizations that adapt to change.</p>
-    <p class="hero__body">
-        Engineering leader with 20+ years scaling products, platforms, and teams, 
-			  now focused on what happens when AI reshapes how engineering organizations work. 
-    </p>
+    <div class="hero__body">
+      <p>
+        Engineering leader with 20+ years scaling products, platforms, and teams,
+        now focused on what happens when AI reshapes how engineering organizations work.
+
+        I build the operating structures that make AI shippable in regulated environments:
+        governance scaffolding, semantic layers, and the developer experience foundations that
+        let teams move fast and stay auditable.
+        I think in systems, with deep care about the humans who are part of them.
+      </p>
+    </div>
     <div class="hero__actions">
       <a href="{{ '/blog/' | relative_url }}" class="btn btn--primary">Read Writing</a>
-      <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--ghost" rel="nofollow">View Resume &darr;</a>
     </div>
   </div>
-  <div class="hero__portrait">
+
+  <div class="hero__about">
     <div class="hero__portrait-frame">
       <img class="hero__portrait-img" src="{{ '/images/portrait-hero.jpeg' | relative_url }}" alt="Fitore Jaha Price">
     </div>
+
+    <div class="career-highlights">
+      <div class="career-highlights__group">
+        <span class="career-highlights__label">Currently</span>
+        <span class="career-highlights__current">EQ Bank</span>
+      </div>
+      <div class="career-highlights__group">
+        <span class="career-highlights__label">Previously</span>
+        <p class="career-highlights__list">
+          Wealthsimple, Wave, CBC&nbsp;/&nbsp;Radio-Canada, Canadian Digital Service,
+          Vodafone&nbsp;NZ, Global&nbsp;TV, Vancity
+        </p>
+      </div>
+    </div>
+
+    <div class="hero__career-actions">
+      <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--ghost" rel="nofollow">Download Resume</a>
+      <a href="https://www.linkedin.com/in/fitorejaha" class="btn btn--ghost" target="_blank" rel="nofollow">View LinkedIn</a>
+    </div>
   </div>
 </section>
+
+<div class="section-rule page-shell"><span class="section-rule__line"></span></div>
 
 <!-- ============================================================= -->
 <!-- Journey-principles (four places, four principles)             -->
@@ -40,26 +68,26 @@ title: Fitore Jaha Price, Director of Engineering
     <div class="journey-principles__item">
       <img class="journey-principles__img" src="{{ '/images/journey-kosovo.png' | relative_url }}" alt="Kosovo alpine mountain valley">
       <span class="journey-principles__principle">Foundations</span>
-      <p class="journey-principles__description">Origin. The first principles everything else is built on.<br/><br/></p>
       <span class="journey-principles__place">Kosovo</span>
+      <p class="journey-principles__description">Origin. The first principles everything else is built on.<br/><br/></p>
     </div>
     <div class="journey-principles__item">
       <img class="journey-principles__img" src="{{ '/images/journey-jerusalem.png' | relative_url }}" alt="Jerusalem through a stone arch">
       <span class="journey-principles__principle">Translation</span>
-      <p class="journey-principles__description">Old systems, new layers. The work is always in the crossing.<br/><br/></p>
       <span class="journey-principles__place">Middle East</span>
+      <p class="journey-principles__description">Old systems, new layers. The work is always in the crossing.<br/><br/></p>
     </div>
     <div class="journey-principles__item">
       <img class="journey-principles__img" src="{{ '/images/journey-auckland.png' | relative_url }}" alt="Auckland harbour and volcanic cone">
       <span class="journey-principles__principle">Adaptation</span>
-      <p class="journey-principles__description">The volcano doesn't ask permission. Neither does growth.</p>
       <span class="journey-principles__place">New Zealand</span>
+      <p class="journey-principles__description">The volcano doesn't ask permission. Neither does growth.</p>
     </div>
     <div class="journey-principles__item">
       <img class="journey-principles__img" src="{{ '/images/journey-ontario.png' | relative_url }}" alt="Ontario escarpment and Lake Ontario">
       <span class="journey-principles__principle">Ownership</span>
-      <p class="journey-principles__description">This is where I chose to stay. Building for the ones who come after.</p>
       <span class="journey-principles__place">Canada</span>
+      <p class="journey-principles__description">This is where I chose to stay. Building for the ones who come after.</p>
     </div>
   </div>
 </section>
@@ -88,59 +116,4 @@ title: Fitore Jaha Price, Director of Engineering
     <span class="writing-row__cta">Read &rarr;</span>
   </a>
   {% endfor %}
-</section>
-
-
-<!-- ============================================================= -->
-<!-- About + Experience                                            -->
-<!-- ============================================================= -->
-<section class="about-experience section page-shell">
-  <div class="about" id="about">
-    <div class="section-head">
-      <span class="section-label">About</span>
-    </div>
-    <div class="about__body">
-
-      <p>
-			  Engineering leader with 20+ years scaling products, platforms, and teams, 
-			  now focused on what happens when AI reshapes how engineering organizations work. 
-			  
-			  I build the operating structures that make AI shippable in regulated environments: 
-			  governance scaffolding, semantic layers, and the developer experience foundations that 
-			  let teams move fast and stay auditable. 
-			  
-			  </p>
-			  <p>
-			  I find the most painful constraint in the system, build the minimum version that proves the idea, and hand it off once it’s real. 
-			  
-			  I think in systems, with deep care about the humans who are part of them.
-             
-            </p>
-    </div>
-  </div>
-
-  <div class="experience" id="experience">
-    <div class="section-head">
-      <span class="section-label">Career Highlights</span>
-    </div>
-
-    <div class="career-highlights">
-      <div class="career-highlights__group">
-        <span class="career-highlights__label">Currently</span>
-        <span class="career-highlights__current">EQ Bank</span>
-      </div>
-      <div class="career-highlights__group">
-        <span class="career-highlights__label">Previously</span>
-        <p class="career-highlights__list">
-          Wealthsimple, Wave, CBC&nbsp;/&nbsp;Radio-Canada, Canadian Digital Service,
-          Vodafone&nbsp;NZ, Global&nbsp;TV, Vancity
-        </p>
-      </div>
-    </div>
-
-    <div class="experience__actions">
-      <a href="{{ '/FitoreJahaPrice_Resume2026.pdf' | relative_url }}" class="btn btn--primary" rel="nofollow">Download Resume</a>
-      <a href="https://www.linkedin.com/in/fitorejaha" class="btn btn--ghost" target="_blank" rel="nofollow">View LinkedIn</a>
-    </div>
-  </div>
 </section>
