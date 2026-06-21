@@ -10,8 +10,6 @@ One approach started with governance. Policies, controls, approval processes, ri
 
 The other started with a small engineering team trying to build something real. They assembled a software factory in a controlled environment, experimented with agent workflows against actual engineering tasks, and gradually expanded what the system could do. The team is now preparing to trial the approach with a production engineering pod.
 
-What surprised me wasn't that the second approach moved faster. It was that building the system exposed the governance requirements more clearly than discussing them ever could.
-
 The concerns in regulated environments are legitimate. The cost of being wrong can be significant. Financial loss, customer impact, compliance issues, operational risk, and erosion of trust all matter. The challenge is that governance discussions often happen without a concrete system to govern. It's difficult to reason about controls, boundaries, ownership, and accountability in the abstract.
 
 Building a small, observable system changes the conversation. The discussion shifts from hypothetical risks to specific risks. From generic controls to targeted controls. From assumptions to evidence.
