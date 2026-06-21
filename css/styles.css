@@ -1008,7 +1008,6 @@ body.dark {
   /* Journey-principles: single column stacked */
   .journey-principles__grid {
     grid-template-columns: 1fr;
-    padding-inline: calc(var(--margin-outer) * 0.2);
   }
 
   .journey-principles {
