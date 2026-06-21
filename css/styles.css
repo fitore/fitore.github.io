@@ -462,6 +462,7 @@ body.dark {
 
 .journey-principles__img {
   width: 100%;
+  height: auto;
   aspect-ratio: 2 / 3;
   object-fit: cover;
   display: block;
@@ -594,6 +595,7 @@ body.dark {
 
 .things-i-build-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center center;
@@ -1006,6 +1008,7 @@ body.dark {
   /* Journey-principles: single column stacked */
   .journey-principles__grid {
     grid-template-columns: 1fr;
+    padding-inline: calc(var(--margin-outer) * 0.2);
   }
 
   .journey-principles {
