@@ -27,6 +27,7 @@ html {
   --text-h2:                1.625rem;
   --text-body-lg:           1.125rem;
   --text-body:              1rem;
+  --text-table:             0.875rem;
   --text-meta:              0.6875rem;
   --text-xs:                0.6875rem;
   --text-cta:               0.75rem;
@@ -51,6 +52,7 @@ html {
   /* Layout */
   --container-max:      76rem;
   --container-readable: 44rem;
+  --table-cell-min:     9rem;
   --margin-outer:       clamp(1.25rem, 4vw, 4rem);
   --hero-portrait-max:  18.48rem;
 }
@@ -588,6 +590,10 @@ body.dark {
   margin-bottom: var(--space-sm);
 }
 
+.things-i-build-card__image-link {
+  display: block;
+}
+
 .things-i-build-card img {
   width: 100%;
   height: auto;
@@ -868,6 +874,36 @@ body.dark {
   border-left: 1px solid var(--rule);
   font-style: italic;
   color: var(--stone);
+}
+
+.post-body table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: var(--space-4) 0 var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-table);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.post-body th,
+.post-body td {
+  min-width: var(--table-cell-min);
+  padding: var(--space-xs) var(--space-sm) var(--space-xs) 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-body th {
+  font-size: var(--text-section-label);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone);
+  border-bottom-color: var(--ink);
 }
 
 .post-diagram {
