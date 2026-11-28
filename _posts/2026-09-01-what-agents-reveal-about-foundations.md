@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What agents reveal about your foundations"
-date: 2026-11-28
+date: 2026-09-01
 info: (images co-created with AI)
 redirect_from:
   - /blog/2026/04/30/merging-organizations/
@@ -70,6 +70,8 @@ Agents struggle in the places where the organization relied on shared understand
 ## Before the pressure arrives
 
 Foundations stay invisible until something applies pressure: growth, regulation, a reorganization, a merger, and now agents. Two questions do most of the work. Before you build, ask what level of governance makes the cost of being wrong acceptable. Before the pressure arrives, ask this: if you had to split this system in two tomorrow, where are the seams? If you can't answer that quickly, you may not have an architecture. You may have a history.
+
+*Co-written with Claude.*
 
 ---
 
