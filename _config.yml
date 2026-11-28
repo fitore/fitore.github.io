@@ -11,3 +11,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+
+plugins:
+  - jekyll-redirect-from
