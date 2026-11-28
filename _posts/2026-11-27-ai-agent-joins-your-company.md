@@ -73,6 +73,8 @@ None of these need Databricks.
 5. **Decide what stays with people.** Some decisions can't be undone. Name them, whatever the tools promise.
 6. **Ask vendors the four questions above.** The lock-in question didn't come up in Toronto, so ask whether you can take your knowledge with you. Ask whether their controls block things or only log them, and how quickly a revoked permission reaches their search indexes.
 
+*Co-written with Claude.*
+
 ## Appendix: Databricks in more detail
 
 **How Genie Ontology is built.** It combines a modelled layer, drawn from what already sits in Unity Catalog (metric views, domains and pages), with a learned layer of snippets picked up from dashboards, SQL queries and notebooks. Certified definitions take priority over learned ones. OntoRank orders candidates by source authority, certification, the expertise and relevance of the people behind them, popularity and recency. Permissions are applied separately: results respect what the asker is allowed to see.
